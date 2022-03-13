@@ -2,7 +2,10 @@ import React from "react";
 
 function Portfolio() {
     return (
-        'Portfolio'
+        <div>
+         <p>   This will be my Portfolio
+    </p>    
+    </div>
     )}
 
 export default Portfolio;
