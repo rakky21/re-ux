@@ -13,8 +13,7 @@ function Nav(props) {
   }, [currentCategory]);
 
   return (
-    <div style={{ background: "grey" }} className="nav">
-      <ul className="nav flex-column">
+      <ul className="nav-tabs list-style:none " style={{ background: "grey" }}>
         {categories.map((category) => (
           <li className={`mx-1 ${currentCategory === category && 'navActive'}`} key={category}>
             <span onClick={() => {
@@ -23,11 +22,15 @@ function Nav(props) {
               {capitalizeFirstLetter(category)}
             </span>
           </li>
-        ))};
+        ))}
 
       </ul>
-    </div>
   );
 }
 
 export default Nav;
+
+
+// render() {
+//   return <span className="menu navigation-menu">Menu</span>
+// }
