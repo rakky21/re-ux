@@ -4,9 +4,10 @@ import React from "react";
 function Projects(){
     
     return(
-        <div>
-            
-        </div>
+        <section>
+            {/* <div className="card" style={0}></div> */}
+            {/* <img src="" className="" alt=""></img> */}
+        </section>
     );
 }
 
