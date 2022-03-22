@@ -1,13 +1,22 @@
 import React from "react";
 
+function Contact() {
+  return (
+    <section className="container">
+      <h1> Contact me </h1>
 
-function Contact(){
+      {/* aline boxes */}
+      <div className="input-group mb-3">
+        <span className="input-group-text"> Email </span>
+        <input type={"text"}></input>
+      </div>
 
-    return(
-        <div>
-            Contact Me.
-        </div>
-    )
+      <div className="input-group mb-3">
+        <span className="input-group-text"> Name </span>
+        <input type={"text"}></input>
+      </div>
+    </section>
+  );
 }
 
 export default Contact;
