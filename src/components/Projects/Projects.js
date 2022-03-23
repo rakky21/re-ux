@@ -2,13 +2,14 @@ import React from "react";
 
 function Projects() {
   return (
-    <section>
+    <section className="card">
       {/* <div className="card" style={0}></div> */}
       {/* <img src="" className="" alt=""></img> */}
       {/* one model displays all */}
       {/* open, close and/or open a new tab button */}
-      <div className="modal-dialog">
-        <div className="modal-header">
+      {/* combine portfolio with about me */}
+      <div className="modal-dialog" >
+        <div className="modal-header" >
           <h5 className="model-little">Names</h5>
           <button
             type="button"

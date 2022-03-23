@@ -9,9 +9,14 @@ function Nav(props) {
   }, [currentCategory]);
 
   return (
-    <ul className="nav-tabs list-style:none " style={{ background: "grey" }}>
+    <section
+      className="nav-tabs bg-light container-fluid"
+      id="navbarToggleExternalContent"
+      style={{ background: "",
+    float: "right"}}
+    >
       {categories.map((category) => (
-        <li
+        <div
           className={`mx-1 ${currentCategory === category && "navActive"}`}
           key={category}
         >
@@ -22,9 +27,9 @@ function Nav(props) {
           >
             {capitalizeFirstLetter(category)}
           </span>
-        </li>
+        </div>
       ))}
-    </ul>
+    </section>
   );
 }
 

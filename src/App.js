@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import Portfolio from "./components/Portfolio/Portfolio";
 import Nav from "./components/Nav/Nav";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
@@ -9,15 +8,12 @@ import Contact from "./components/Contact/Contact";
 function App() {
 
   const categories =
-    ['portfolio', 'about Me', 'projects', 'contact']
+    ['about Me', 'projects', 'contact']
 
   const [currentCategory, setCurrentCategory] = useState(categories[0])
 
   const showPage = () => {
-    if (currentCategory === 'portfolio') {
-      return <Portfolio currentCategory={currentCategory}></Portfolio>
-    }
-    else if (currentCategory === 'about Me') {
+    if (currentCategory === 'about Me') {
       return <About currentCategory={currentCategory}></About>
     }
     else if (currentCategory === 'projects'){
