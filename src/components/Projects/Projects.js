@@ -2,7 +2,7 @@ import React from "react";
 
 function Projects() {
   return (
-    <section className="card">
+    <section className="card" style={{ border: "solid", width: "18rem"}}>
       {/* <div className="card" style={0}></div> */}
       {/* <img src="" className="" alt=""></img> */}
       {/* one model displays all */}
