@@ -9,7 +9,7 @@ function Projects() {
       {/* open, close and/or open a new tab button */}
       {/* combine portfolio with about me */}
       <div className="modal-dialog" >
-        <div className="modal-header" >
+        <div className="modal-header bg-light" style={{}}>
           <h5 className="model-little">Names</h5>
           <button
             type="button"

@@ -3,7 +3,7 @@ import React from "react";
 function Contact() {
   return (
     <section className="container">
-      <h1> Contact me </h1>
+      <h1 className="bg-light col-8" style={{border: ""}}> Contact me </h1>
 
       {/* aline boxes */}
       <div className="input-group mb-3">
