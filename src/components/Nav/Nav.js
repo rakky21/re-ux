@@ -12,8 +12,10 @@ function Nav(props) {
     <section
       className="nav-tabs bg-light container-fluid"
       id="navbarToggleExternalContent"
-      style={{ background: "",
-    float: "right"}}
+      style={{
+        background: "",
+        float: "right"
+      }}
     >
       {categories.map((category) => (
         <div
