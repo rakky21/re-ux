@@ -2,9 +2,8 @@ import React from "react";
 
 function Projects() {
   return (
-    <section className="card" style={{ border: "solid", width: "18rem"}}>
-      {/* <div className="card" style={0}></div> */}
-      {/* <img src="" className="" alt=""></img> */}
+    <section className="container"> 
+      <div className="card bg-light" style={{ border: "solid", width: "25rem"}}>
       {/* one model displays all */}
       {/* open, close and/or open a new tab button */}
       {/* combine portfolio with about me */}
@@ -35,6 +34,7 @@ function Projects() {
             New Browser{" "}
           </button>
         </div>
+      </div>
       </div>
     </section>
   );

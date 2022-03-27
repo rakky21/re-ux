@@ -10,8 +10,7 @@ function Nav(props) {
 
   return (
     <section
-      className="nav-tabs bg-light container-fluid"
-      id="navbarToggleExternalContent"
+      className="nav navbar bg-info container-fluid"
       style={{
         background: "",
         float: "right"
@@ -19,7 +18,7 @@ function Nav(props) {
     >
       {categories.map((category) => (
         <div
-          className={`mx-1 ${currentCategory === category && "navActive"}`}
+          className={`mx-1 container-fluid  ${currentCategory === category && "navActive"}`}
           key={category}
         >
           <span
@@ -36,7 +35,3 @@ function Nav(props) {
 }
 
 export default Nav;
-
-// render() {
-//   return <span className="menu navigation-menu">Menu</span>
-// }
