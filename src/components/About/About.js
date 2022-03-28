@@ -1,24 +1,20 @@
 import React from "react";
+import Cara from "../../assets/cover/cara.jpg";
 
 function About() {
   return (
-   
-   <section  className="container">
-    <div className="card bg-light" style={{ border: "solid", width: "35rem" }}>
-    <img src="" className="card-img-top" alt="Una Foto Aqui"></img>
-    <div className="card-body"  >
-      <h1 className="card-title">
-        {" "}
-        My Portfolio{" "}
-      </h1>
-
-      <p className="card-text my-2">
-        This is all that I've accomplished about me.
-      </p>
-    </div>
-  </div>
-  </section>
-    );
+    <section className="container">
+      <div className="card my-2" style={{ border: "1px solid", width: "35rem", background:"#F8F8FF"}}>
+        <img src={Cara} className="card-img-top my-2 center" alt="Una Foto Aqui" style={{height:"500px", width: "85%"}}></img>
+        <div className="card-body">
+          <h2 className="card-title"> My Portfolio </h2>
+          <p className="card-text my-2">
+            This is all that I've accomplished about me.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default About;

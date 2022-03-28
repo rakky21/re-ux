@@ -9,28 +9,29 @@ function Nav(props) {
   }, [currentCategory]);
 
   return (
-    <section
-      className="nav navbar bg-info container-fluid"
-      style={{
-        background: "",
-        float: "right"
-      }}
+    <nav
+      class="nav"
+      style={{ background: "#6495ED" }}
     >
       {categories.map((category) => (
-        <div
-          className={`mx-1 container-fluid  ${currentCategory === category && "navActive"}`}
-          key={category}
-        >
-          <span
-            onClick={() => {
-              setCurrentCategory(category);
-            }}
+        <div className="nav-item">
+          <div
+            className={`mx-1 nav-link  ${
+              currentCategory === category && "navActive"
+            }`}
+            key={category}
           >
-            {capitalizeFirstLetter(category)}
-          </span>
+            <span
+              onClick={() => {
+                setCurrentCategory(category);
+              }}
+            >
+              {capitalizeFirstLetter(category)}
+            </span>
+          </div>
         </div>
       ))}
-    </section>
+    </nav>
   );
 }
 
