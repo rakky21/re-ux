@@ -3,7 +3,7 @@ import React from "react";
 function Contact() {
   return (
     <section className="container my-2">
-      <div style={{ border: "1px solid", width: "75rem", background: "#F8F8FF"}}>
+      <div className="card" style={{ border: "1px solid", width: "75rem", background: "#F8F8FF"}}>
         <h2 className="fluid" style={{ background: "#6495ED" }}>
           Contact me
         </h2>
