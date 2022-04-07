@@ -9,7 +9,7 @@ function Nav(props) {
   }, [currentCategory]);
 
   return (
-    <nav class="nav" style={{ background: "#6495ED" }}>
+    <nav class="nav" className="nav" style={{ background: "#6495ED" }}>
       {categories.map((category) => (
           <div className="nav-item">
             <h3 className={`mx-1 nav-link  ${ currentCategory === category && "navActive" }`} key={category}>
