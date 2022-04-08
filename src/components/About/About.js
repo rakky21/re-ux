@@ -4,15 +4,15 @@ import Cara from "../../assets/cover/cara.jpg";
 
 function About() {
   return (
-    <section className="container">
+    <section className="container my-2">
       <div
-        className="row my-2"
+        className="row"
         style={{ border: "1px solid", width: "35rem", background: "#F8F8FF" }}
         class="center"
       >
         <img
           src={Cara}
-          className="card-img-top"
+          className="card-img-top my-2"
           alt="Una Foto Aqui"
           style={{ height: "500px", width: "auto" }}
         ></img>
