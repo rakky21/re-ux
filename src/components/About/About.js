@@ -7,7 +7,7 @@ function About() {
     <section className="container my-2">
       <div
         className="row"
-        style={{ border: "1px solid", width: "35rem", background: "#F8F8FF" }}
+        style={{ border: "1px solid", width: "35rem", height: '100%', background: "#F8F8FF" }}
         class="center"
       >
         <img
@@ -17,10 +17,10 @@ function About() {
           style={{ height: "500px", width: "auto" }}
         ></img>
         <div className="card-body">
-          <h2 className="card-title" class="cara">
+          <h1 className="card-title" class="cara">
             {" "}
-            My Portfolio{" "}
-          </h2>
+            Rakky{" "}
+          </h1>
           <p className="card-text my-2">
             This is all that I've accomplished about me.
           </p>

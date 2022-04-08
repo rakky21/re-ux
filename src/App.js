@@ -4,6 +4,7 @@ import Nav from "./components/Nav/Nav";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
       <main>
         {showPage()}
       </main>
+      <footer><Footer></Footer></footer>
     </div>)
 }
 
