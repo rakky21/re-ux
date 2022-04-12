@@ -11,35 +11,22 @@ function Projects() {
   const pictures = [];
 
   return (
-    <section className="my-2">
-      <div className="modal-dialog">
-        <div className="modal-content " style={{ background: "#F8F8FF" }}>
-          <div className="modal-header">
-            <h2 className="modal-title"> Title</h2>
-            <button className="btn-close"></button>
-          </div>
-          <div className="modal-body" target="_blank" rel="noreferrer noopener">
-            <div>
-              <img
-                className=""
-                src={Toolkit}
-                alt="This is the foto"
-                style={{ height: "500px", width: "auto" }}
-              ></img>
-            </div>
-          </div>
-          <div className="modal-footer">
-            <a
-              onClick={{ openFile }}
-              className="button btn btn-primary"
-              href="https://lrivales.github.io/app-toolkit/"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              Open
-            </a>
-          </div>
-        </div>
+    <section className="container">
+    <div className="my-2 card" style={{ width: "18rem"}}>
+      <img
+        className="card-img-top"
+        src={Toolkit}
+        alt="This is the foto"
+      ></img>
+      <a
+        onClick={{ openFile }}
+        className="button btn btn-primary"
+        href="https://lrivales.github.io/app-toolkit/"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        Open
+      </a>
       </div>
     </section>
   );

@@ -19,7 +19,7 @@ function About() {
         <div className="card-body">
           <h1 className="card-title" class="cara">
             {" "}
-            Rakky{" "}
+            Freddy{" "}
           </h1>
           <p className="card-text my-2">
             This is all that I've accomplished about me.
