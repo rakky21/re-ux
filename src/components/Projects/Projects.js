@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+// import React from "react";
 import Toolkit from "../../assets/projects/toolkit.jpg";
 
 // Needs to create a whole new model with each project for?
@@ -8,7 +9,12 @@ function Projects() {
     console.log("clicked");
   }
 
-  const pictures = [];
+  const [cards] = useState([
+    {
+      name: "Toolkit",
+      description: "This is the first group project"
+    }
+  ]);
 
   return (
     <section className="container">
