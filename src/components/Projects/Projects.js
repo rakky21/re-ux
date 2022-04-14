@@ -12,7 +12,18 @@ function Projects() {
   const [cards] = useState([
     {
       name: "Toolkit",
+      href: "https://lrivales.github.io/app-toolkit/",
       description: "This is the first group project"
+    },
+    {
+      name: "2",
+      href: "/",
+      description: "This is the second group project"
+    },
+    {
+      name: "3",
+      href: "/",
+      description: "This is the third group project"
     }
   ]);
 
@@ -22,7 +33,7 @@ function Projects() {
       <img
         className="card-img-top"
         src={Toolkit}
-        alt="This is the foto"
+        alt= {cards.name}
       ></img>
       <a
         onClick={{ openFile }}
