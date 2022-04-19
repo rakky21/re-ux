@@ -12,21 +12,7 @@ code {
     monospace;
 }
 
-/* .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-} */
-
-/* .center {
-  margin: auto;
-  width: 50%;
-  border: 3px solid green;
-  padding: 10px;
-} */
-
-#leftmenuinnerinner {
+.leftmenuinnerinner {
   height: 100%;
   width: 100%;
   overflow-y: scroll;
@@ -41,4 +27,17 @@ code {
   align-items: center;
   margin: auto;
   width: 100%;
+}
+
+.footer {
+  background-size: cover;
+  background-position: center;
+  background: var(--fifth-color);
+  padding: 40px 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  background-image: url("https://i.natgeofe.com/k/a2a738a9-e019-4911-98e6-17f31c45ac88/milky-way-2_2x1.jpg");
+
 }
