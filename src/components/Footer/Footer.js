@@ -2,8 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="container" style={{ position: ""}}>
-      {/* <footer className="py-3 my-4 justify-content-between border-top flex-wrap d-flex"> */}
+    <div className="container">
       <footer className="d-flex justify-content-between align-items-center py-3 my-4 border-top">
 
         <div className="col-md-4 d-flex">
