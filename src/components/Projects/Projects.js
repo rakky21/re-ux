@@ -31,86 +31,135 @@ function Projects() {
   return (
     <section className="container">
       <div className="row">
-        <div className="my-2 card" style={{ width: "18rem" }}>
-          <img className="card-img-top" src={Toolkit} alt={cards.name}></img>
-          <a
-            onClick={{ openFile }}
-            className="button btn btn-primary col-4"
-            href="https://lrivales.github.io/app-toolkit/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Open
-          </a>
+        <div className="col-4">
+          <div className="my-2 card" style={{ width: "18rem" }}>
+            <img
+              className="card-img-top center"
+              src={Toolkit}
+              alt={cards.name}
+            ></img>
+            <p className="center"> This is the first group project</p>
+            <div className="center">
+              <a
+                onClick={{ openFile }}
+                className="button btn btn-primary col-4"
+                href="https://lrivales.github.io/app-toolkit/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Open
+              </a>
+            </div>
+          </div>
         </div>
-
-        <div className="my-2 card" style={{ width: "18rem" }}>
-          <img className="card-img-top" src={Tunebook} alt={cards.name}></img>
-          <a
-            onClick={{ openFile }}
-            className="button btn btn-primary col-4"
-            href="https://lrivales.github.io/app-toolkit/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Open
-          </a>
+        <div className="col-4">
+          <div className="my-2 card" style={{ width: "18rem" }}>
+            <img
+              className="card-img-top center"
+              src={Tunebook}
+              alt={cards.name}
+            ></img>
+            <p className="center"> This is the second group project</p>
+            <div className="center">
+              <a
+                onClick={{ openFile }}
+                className="button btn btn-primary col-4"
+                href="https://lrivales.github.io/app-toolkit/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Open
+              </a>
+            </div>
+          </div>
         </div>
-
-        <div className="my-2 card" style={{ width: "18rem" }}>
-          <img className="card-img-top" src={Tunebook} alt={cards.name}></img>
-          <a
-            onClick={{ openFile }}
-            className="button btn btn-primary col-4"
-            href="https://lrivales.github.io/app-toolkit/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Open
-          </a>
+        <div className="col-4">
+          <div className="my-2 card" style={{ width: "18rem" }}>
+            <img
+              className="card-img-top center"
+              src={Tunebook}
+              alt={cards.name}
+            ></img>
+            <p className="center"> This is the Third group project</p>
+            <div className="center">
+              <a
+                onClick={{ openFile }}
+                className="button btn btn-primary col-4"
+                href="https://lrivales.github.io/app-toolkit/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Open
+              </a>
+            </div>
+          </div>
         </div>
-
       </div>
+
       <div className="row">
-        <div className="my-2 card" style={{ width: "18rem" }}>
-          <img className="card-img-top" src={Toolkit} alt={cards.name}></img>
-          <a
-            onClick={{ openFile }}
-            className="button btn btn-primary col-4"
-            href="https://lrivales.github.io/app-toolkit/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Open
-          </a>
+        <div className="col-4">
+          <div className="my-2 card" style={{ width: "18rem" }}>
+            <img
+              className="card-img-top center"
+              src={Toolkit}
+              alt={cards.name}
+            ></img>
+            <p className="center"> This is the first group project</p>
+            <div className="center">
+              <a
+                onClick={{ openFile }}
+                className="button btn btn-primary col-4"
+                href="https://lrivales.github.io/app-toolkit/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Open
+              </a>
+            </div>
+          </div>
         </div>
-
-        <div className="my-2 card" style={{ width: "18rem" }}>
-          <img className="card-img-top" src={Tunebook} alt={cards.name}></img>
-          <a
-            onClick={{ openFile }}
-            className="button btn btn-primary col-4"
-            href="https://lrivales.github.io/app-toolkit/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Open
-          </a>
+        <div className="col-4">
+          <div className="my-2 card" style={{ width: "18rem" }}>
+            <img
+              className="card-img-top center"
+              src={Tunebook}
+              alt={cards.name}
+            ></img>
+            <p className="center"> This is the second group project</p>
+            <div className="center">
+              <a
+                onClick={{ openFile }}
+                className="button btn btn-primary col-4"
+                href="https://lrivales.github.io/app-toolkit/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Open
+              </a>
+            </div>
+          </div>
         </div>
-        
-        <div className="my-2 card" style={{ width: "18rem" }}>
-          <img className="card-img-top" src={Tunebook} alt={cards.name}></img>
-          <a
-            onClick={{ openFile }}
-            className="button btn btn-primary col-4"
-            href="https://lrivales.github.io/app-toolkit/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Open
-          </a>
+        <div className="col-4">
+          <div className="my-2 card" style={{ width: "18rem" }}>
+            <img
+              className="card-img-top center"
+              src={Tunebook}
+              alt={cards.name}
+            ></img>
+            <p className="center"> This is the Third group project</p>
+            <div className="center">
+              <a
+                onClick={{ openFile }}
+                className="button btn btn-primary col-4"
+                href="https://lrivales.github.io/app-toolkit/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Open
+              </a>
+            </div>
+          </div>
         </div>
-
       </div>
     </section>
   );
