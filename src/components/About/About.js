@@ -17,12 +17,12 @@ function About() {
           style={{ height: "500px", width: "auto" }}
         ></img>
         <div className="card-body">
-          <h1 className="card-title" class="cara">
+          <h1 className="card-title border-bottom" class="cara">
             {" "}
             Freddy{" "}
           </h1>
           <p className="card-text my-2">
-            This is all that I've accomplished about me.
+           I'm Freddy and this is my Portfolio <br /> These are the group and personal projects.
           </p>
         </div>
       </div>
