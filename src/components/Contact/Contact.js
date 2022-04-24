@@ -3,14 +3,14 @@ import React from "react";
 function Contact() {
   return (
     <section className="container" >
-      <div className="row" style={{ background: "#F8F8FF" }} >
+      <div className="row">
       <h1 className="my-3"> Freddy Rakky21 </h1>
       <p> Submit to request resume </p>
 
       <div className="mb-3 row">
         <div className="col-4"> 
-        <label className="form-label">Email adddress</label>
-        <input className="form-control" placeholder="email@example.com" type="email"></input>
+        <label className="form-label">Name</label>
+        <input className="form-control" placeholder="Will Smith" type="email"></input>
       </div></div>
 
       <div className="mb-3 row">
