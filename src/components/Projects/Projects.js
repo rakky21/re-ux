@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import React from "react";
-import Toolkit from "../../assets/projects/toolkit.jpg";
-import Tunebook from "../../assets/projects/tunebook.jpg";
+import Toolkit from "../../assets/projects/Toolkit.jpg";
+import Tunebook from "../../assets/projects/Tunebook.jpg";
 
 // Needs to create a whole new model with each project for?
 function Projects() {
@@ -39,114 +39,6 @@ function Projects() {
               alt={cards.name}
             ></img>
             <p className="center"> This is the first group project</p>
-            <div className="center">
-              <a
-                onClick={{ openFile }}
-                className="button btn btn-primary col-4"
-                href="https://lrivales.github.io/app-toolkit/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Open
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-4">
-          <div className="my-2 card" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top center"
-              src={Tunebook}
-              alt={cards.name}
-            ></img>
-            <p className="center"> This is the second group project</p>
-            <div className="center">
-              <a
-                onClick={{ openFile }}
-                className="button btn btn-primary col-4"
-                href="https://lrivales.github.io/app-toolkit/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Open
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-4">
-          <div className="my-2 card" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top center"
-              src={Tunebook}
-              alt={cards.name}
-            ></img>
-            <p className="center"> This is the Third group project</p>
-            <div className="center">
-              <a
-                onClick={{ openFile }}
-                className="button btn btn-primary col-4"
-                href="https://lrivales.github.io/app-toolkit/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Open
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="row">
-        <div className="col-4">
-          <div className="my-2 card" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top center"
-              src={Toolkit}
-              alt={cards.name}
-            ></img>
-            <p className="center"> This is the first group project</p>
-            <div className="center">
-              <a
-                onClick={{ openFile }}
-                className="button btn btn-primary col-4"
-                href="https://lrivales.github.io/app-toolkit/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Open
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-4">
-          <div className="my-2 card" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top center"
-              src={Tunebook}
-              alt={cards.name}
-            ></img>
-            <p className="center"> This is the second group project</p>
-            <div className="center">
-              <a
-                onClick={{ openFile }}
-                className="button btn btn-primary col-4"
-                href="https://lrivales.github.io/app-toolkit/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Open
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-4">
-          <div className="my-2 card" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top center"
-              src={Tunebook}
-              alt={cards.name}
-            ></img>
-            <p className="center"> This is the Third group project</p>
             <div className="center">
               <a
                 onClick={{ openFile }}
