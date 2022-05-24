@@ -1,167 +1,41 @@
-import React, { useState } from "react";
-// import React from "react";
-import Toolkit from "../../assets/projects/toolkit.jpg";
-import Tunebook from "../../assets/projects/tunebook.jpg";
+import React from "react";
+import tunebook from "../../assets/projects/tunebook.jpg";
+import toolkit from "../../assets/projects/toolkit.jpg";
+import famigos from "../../assets/projects/4amigos.jpg";
 
-// Needs to create a whole new model with each project for?
+// for loop for each item on the list create a "div"
 function Projects() {
-  function openFile(e) {
-    e.preventDefault();
-    console.log("clicked");
-  }
-
-  const [cards] = useState([
+  const [cards] = [
     {
-      name: "Toolkit",
+      name: "Displayone",
       href: "https://lrivales.github.io/app-toolkit/",
-      description: "This is the first group project",
+      description: "First",
+      img: toolkit,
     },
     {
-      name: "2",
-      href: "/",
-      description: "This is the second group project",
+      name: "2display",
+      href: "https://lrivales.github.io/app-toolkit/",
+      description: "Second",
+      img: tunebook,
     },
     {
-      name: "3",
-      href: "/",
-      description: "This is the third group project",
-    },
-  ]);
+      name: "3third",
+      href: "https://lrivales.github.io/app-toolkit/",
+      description:"Third",
+      img: famigos,
+    }
+  ];
 
   return (
-    <section className="container">
-      <div className="row">
-        <div className="col-4">
-          <div className="my-2 card" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top center"
-              src={Toolkit}
-              alt={cards.name}
-            ></img>
-            <p className="center"> This is the first group project</p>
-            <div className="center">
-              <a
-                onClick={{ openFile }}
-                className="button btn btn-primary col-4"
-                href="https://lrivales.github.io/app-toolkit/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Open
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-4">
-          <div className="my-2 card" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top center"
-              src={Tunebook}
-              alt={cards.name}
-            ></img>
-            <p className="center"> This is the second group project</p>
-            <div className="center">
-              <a
-                onClick={{ openFile }}
-                className="button btn btn-primary col-4"
-                href="https://lrivales.github.io/app-toolkit/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Open
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-4">
-          <div className="my-2 card" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top center"
-              src={Tunebook}
-              alt={cards.name}
-            ></img>
-            <p className="center"> This is the Third group project</p>
-            <div className="center">
-              <a
-                onClick={{ openFile }}
-                className="button btn btn-primary col-4"
-                href="https://lrivales.github.io/app-toolkit/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Open
-              </a>
-            </div>
-          </div>
-        </div>
+    <div className="container"> 
+    <div className="card" style={{ width: "18rem" }}>
+      <img src={cards.img} alt="img" />
+      <div className="center">
+      <div>{cards.name}</div>
+      <a href={cards.href} target="_blank" rel="noreferrer noopener" className="button"> Open </a>
       </div>
-
-      <div className="row">
-        <div className="col-4">
-          <div className="my-2 card" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top center"
-              src={Toolkit}
-              alt={cards.name}
-            ></img>
-            <p className="center"> This is the first group project</p>
-            <div className="center">
-              <a
-                onClick={{ openFile }}
-                className="button btn btn-primary col-4"
-                href="https://lrivales.github.io/app-toolkit/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Open
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-4">
-          <div className="my-2 card" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top center"
-              src={Tunebook}
-              alt={cards.name}
-            ></img>
-            <p className="center"> This is the second group project</p>
-            <div className="center">
-              <a
-                onClick={{ openFile }}
-                className="button btn btn-primary col-4"
-                href="https://lrivales.github.io/app-toolkit/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Open
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-4">
-          <div className="my-2 card" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top center"
-              src={Tunebook}
-              alt={cards.name}
-            ></img>
-            <p className="center"> This is the Third group project</p>
-            <div className="center">
-              <a
-                onClick={{ openFile }}
-                className="button btn btn-primary col-4"
-                href="https://lrivales.github.io/app-toolkit/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Open
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
-    </section>
+    </div>
   );
 }
 
