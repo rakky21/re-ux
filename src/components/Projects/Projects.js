@@ -1,60 +1,33 @@
-import React, { useState } from "react";
-// import React from "react";
-import Toolkit from "../../assets/projects/Toolkit.jpg";
-import Tunebook from "../../assets/projects/Tunebook.jpg";
+import React from "react";
+import Card from "../Card/Card.js";
+import toolkit from "../../assets/projects/Toolkit.jpg";
+import tunebook from "../../assets/projects/Tunebook.jpg";
+import famigos from '../../assets/projects/Famigos.jpg';
 
-// Needs to create a whole new model with each project for?
 function Projects() {
-  function openFile(e) {
-    e.preventDefault();
-    console.log("clicked");
-  }
-
-  const [cards] = useState([
+  const cards = [
     {
+      id: "1",
+      img: toolkit,
       name: "Toolkit",
+      description: "First project",
       href: "https://lrivales.github.io/app-toolkit/",
-      description: "This is the first group project",
     },
     {
-      name: "2",
-      href: "/",
-      description: "This is the second group project",
+      id: "2",
+      img: tunebook,
+      name: "Tunebook",
+      description: "First Second",
     },
     {
-      name: "3",
-      href: "/",
-      description: "This is the third group project",
+      img: famigos,
+      name: "FourAmigos",
+      description: "Third project"
     },
-  ]);
+  ];
 
-  return (
-    <section className="container">
-      <div className="row">
-        <div className="col-4">
-          <div className="my-2 card" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top center"
-              src={Toolkit}
-              alt={cards.name}
-            ></img>
-            <p className="center"> This is the first group project</p>
-            <div className="center">
-              <a
-                onClick={{ openFile }}
-                className="button btn btn-primary col-4"
-                href="https://lrivales.github.io/app-toolkit/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Open
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+  const projectList = cards.map((card) => <Card key={card.id} card={card} />);
+  return <div> {projectList}</div>;
 }
 
 export default Projects;
