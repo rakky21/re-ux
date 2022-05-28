@@ -1,42 +1,33 @@
 import React from "react";
-import tunebook from "../../assets/projects/tunebook.jpg";
-import toolkit from "../../assets/projects/toolkit.jpg";
-import famigos from "../../assets/projects/4amigos.jpg";
+import Card from "../Card/Card.js";
+import toolkit from "../../assets/projects/Toolkit.jpg";
+import tunebook from "../../assets/projects/Tunebook.jpg";
+import famigos from '../../assets/projects/Famigos.jpg';
 
-// for loop for each item on the list create a "div"
 function Projects() {
-  const [cards] = [
+  const cards = [
     {
-      name: "Displayone",
-      href: "https://lrivales.github.io/app-toolkit/",
-      description: "First",
+      id: "1",
       img: toolkit,
+      name: "Toolkit",
+      description: "First project",
+      href: "https://lrivales.github.io/app-toolkit/",
     },
     {
-      name: "2display",
-      href: "https://lrivales.github.io/app-toolkit/",
-      description: "Second",
+      id: "2",
       img: tunebook,
+      name: "Tunebook",
+      description: "First Second",
     },
     {
-      name: "3third",
-      href: "https://lrivales.github.io/app-toolkit/",
-      description:"Third",
       img: famigos,
-    }
+      name: "FourAmigos",
+      description: "Third project"
+    },
   ];
 
-  return (
-    <div className="container"> 
-    <div className="card" style={{ width: "18rem" }}>
-      <img src={cards.img} alt="img" />
-      <div className="center">
-      <div>{cards.name}</div>
-      <a href={cards.href} target="_blank" rel="noreferrer noopener" className="button"> Open </a>
-      </div>
-      </div>
-    </div>
-  );
+  const projectList = cards.map((card) => <Card key={card.id} card={card} />);
+  return <div> {projectList}</div>;
 }
 
 export default Projects;
