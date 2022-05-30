@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../Card/Card.js";
 import toolkit from "../../assets/projects/Toolkit.jpg";
 import tunebook from "../../assets/projects/Tunebook.jpg";
-import famigos from '../../assets/projects/Famigos.jpg';
+import famigos from "../../assets/projects/Famigos.jpg";
 
 function Projects() {
   const cards = [
@@ -22,7 +22,7 @@ function Projects() {
     {
       img: famigos,
       name: "FourAmigos",
-      description: "Third project"
+      description: "Third project",
     },
   ];
 
