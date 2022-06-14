@@ -1,8 +1,8 @@
 import React from "react";
 import Card from "../Card/Card.js";
-import toolkit from "../../assets/projects/Toolkit.jpg";
-import tunebook from "../../assets/projects/Tunebook.jpg";
-import famigos from "../../assets/projects/Famigos.jpg";
+import toolkit from "../../assets/projects/toolkit.jpg";
+import tunebook from "../../assets/projects/tunebook.jpg";
+import famigos from '../../assets/projects/Famigos.jpg';
 
 function Projects() {
   const cards = [

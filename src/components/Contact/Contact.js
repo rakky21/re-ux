@@ -3,30 +3,23 @@ import React from "react";
 function Contact() {
   return (
     <section className="container" >
-      <div className="row">
-      <h1 className="my-3"> Freddy Rakky21 </h1>
-      <p> Submit to request resume </p>
-
-      <div className="mb-3 row">
-        <div className="col-4"> 
-        <label className="form-label">Name</label>
-        <input className="form-control" placeholder="Will Smith" type="email"></input>
-      </div></div>
-
-      <div className="mb-3 row">
-        <div className="col-4">
-        <label className="form-label">Email adddress</label>
-        <input className="form-control" placeholder="email@example.com" type="email"></input>
-      </div></div>
-
-      <div className="mb-3 row">
-        <div className="col-4">
-        <label className="form-label">Comment</label>
-        <textarea className="form-control" rows="3"></textarea>
-      </div>
-      </div>
-      </div>
+   
+      <h2 className="my-3"> Contact </h2>
   
+        <form className="col-4"> 
+
+        <label>Name</label>
+        <input placeholder="Name" type="text" id="name"></input>
+
+        <label>Email</label>
+        <input placeholder="email@e.com" type="email" id="email"></input>
+   
+        <label>Message</label>
+        <textarea placeholder="Message" type="text" id="message"></textarea>
+        <input type="submit"></input>
+
+      </form>
+   
     </section>
   );
 }
