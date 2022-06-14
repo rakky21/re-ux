@@ -2,8 +2,8 @@ import React from "react";
 
 function Contact() {
   return (
-    <section className="container" >
-      <div className="row" style={{ background: "#F8F8FF" }} >
+    <section className="leftmenuinnerinner" >
+      <div className="" style={{ background: "#F8F8FF" }} >
       <h1 className="my-3"> Freddy Rakky21 </h1>
       <p> Submit to request resume </p>
 

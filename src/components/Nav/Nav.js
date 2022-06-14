@@ -9,15 +9,23 @@ function Nav(props) {
   }, [currentCategory]);
 
   return (
-    <nav class="nav" className="nav" style={{ background: "#6495ED" }}>
+    <nav className="nav">
       {categories.map((category) => (
-          <div className="nav-item">
-            <h3 className={`mx-1 nav-link  ${ currentCategory === category && "navActive" }`} key={category}>
-              <span onClick={() => { setCurrentCategory(category); }}> {capitalizeFirstLetter(category)} </span>
-            </h3>
-          </div>
-        ))}
-      </nav>
+        <h3
+          className={`${currentCategory === category && "navActive"}`}
+          key={category}
+        >
+          <span
+            onClick={() => {
+              setCurrentCategory(category);
+            }}
+          >
+            {" "}
+            {capitalizeFirstLetter(category)}{" "}
+          </span>
+        </h3>
+      ))}
+    </nav>
   );
 }
 
