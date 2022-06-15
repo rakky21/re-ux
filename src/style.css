@@ -1,9 +1,10 @@
 /* background color : FFF0F5 */
 
-nav {
-  position: flex;
+.nav {
+  display: flex;
   background-color: #6495ED;
-  padding: 15px;
+  padding: 12px;
+  
 }
 
 body {
@@ -11,20 +12,26 @@ body {
   text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.card {
+  vertical-align:top;
+  width:160px;
+  height:auto;
+}
+.contact {
+background-color: #F8F8FF;
+position: center;
+padding: 12px;
+margin: 0;
 }
 
-.leftmenuinnerinner {
+.about {
+  margin: 0;
   height: 100%;
   width: 100%;
-  overflow-y: scroll;
   overflow-x: hidden;
-  padding-top: 20px;
 }
 
-center{
+.center {
   text-align: center;
   display: block;
   justify-content: center;
@@ -34,10 +41,11 @@ center{
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   background-color: #6495ED;
   text-align: center;
   bottom: 0;
   width: 100%;
-
+  opacity: 75%;
+  bottom: 0px;
 }

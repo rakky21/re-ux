@@ -4,17 +4,17 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 function About() {
   return (
-    <section className="container my-2">
+    <section className="about">
       <div
         className="row"
-        style={{ width: "35rem", height: "100%", background: "#F8F8FF" }}
+        style={{ width: "25rem", height: "100%", background: "#F8F8FF" }}
         class="center"
       >
         <img
           src={Cara}
           className="card-img-top my-2"
           alt="Una Foto Aqui"
-          style={{ height: "500px", width: "auto" }}
+          style={{ height: "300px", width: "auto" }}
         ></img>
         <div className="card-body">
           <h1 className="card-title border-bottom" class="cara">

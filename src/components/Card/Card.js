@@ -2,8 +2,8 @@ import React from "react";
 
 function Card({ card, key }) {
   return (
-    <div className="columns">
       <div className="container">
+    
         <div className="card my-2" style={{ width: "18rem" }}>
           <img src={card.img} alt="img" />
           <div className="center">
@@ -23,7 +23,7 @@ function Card({ card, key }) {
 
           </div>
         </div>
-      </div>
+      
     </div>
   );
 }
