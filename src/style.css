@@ -3,43 +3,92 @@
 .nav {
   display: flex;
   background-color: #6495ED;
+}
+.nav > h3 {
   padding: 12px;
-  
 }
 
 body {
-  margin: 0;
+  font-family: Inter, sans-serif;
   text-align: center;
 }
 
-.card {
-  vertical-align:top;
-  width:160px;
-  height:auto;
-}
-.contact {
-background-color: #F8F8FF;
-position: center;
-padding: 12px;
-margin: 0;
+.body > .buttonz {
+  background-color: blueviolet;
+  color: aquamarine;
+  border: 0;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+
 }
 
+/* ABOUT */
 .about {
-  margin: 0;
+  position: center;
   height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-}
-
-.center {
-  text-align: center;
+  margin: auto;
+  width: max-content;
+  border-radius: 5px;
   display: block;
+  overflow-x: hidden;
+  text-align: center;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  width: 100%;
+}
+.about > img {
+  border-radius: 10px;
 }
 
+/* CARDS */
+.cards {
+  font-size: 20px;
+  vertical-align:top;
+  width:max-content;
+  height:100%;
+  border-radius: 5px;
+  list-style-type: none;
+  margin: auto;
+  padding: 12px;
+  display: inline-block;
+  overflow: hidden;
+}
+.cards > img {
+  height: 200px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+/* CONTACT */
+.contact {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  padding: 25px;
+  overflow-x: hidden;
+  border-radius: 5px;
+}
+.contact label {
+  text-align: left;
+  display: block;
+}
+.contact > h1 {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+.contact > input, .about > textarea {
+  width: 100px;
+  padding: 6px;
+  margin: 10px 0;
+  border: 1px solid;
+  box-sizing: border-box;
+}
+.contact > .button {
+  
+  border-radius: 5px;
+}
+
+/* FOOTER */
 footer {
   position: fixed;
   background-color: #6495ED;
@@ -48,4 +97,14 @@ footer {
   width: 100%;
   opacity: 75%;
   bottom: 0px;
+}
+
+
+.center {
+  text-align: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 100%;
 }

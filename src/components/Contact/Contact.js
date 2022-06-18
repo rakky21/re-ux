@@ -1,29 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
+// setState?
 
-function Contact() {
+export default function Contact() {
+  const [name, setName] = useState("");
+  const [apellido, setApellido] = useState("");
+  const [correo, setCorreo] = useState("");
+
   return (
     <section className="container">
       <div className="contact">
-        <h1 className="my-3"> Contact</h1>
-
-        <div className="mb-3 col-4">
-          <label className="form-label">Email adddress</label>
-          <input className="form-control" placeholder="email@example.com" type="email"></input>
+        <h1> Contact</h1>
+        <div>
+          <label> First Name:</label>
+          <input
+            placeholder="John"
+            type="text"
+            name="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
         </div>
-
-        <div className="mb-3 col-4">
-          <label className="form-label">Email adddress</label>
-          <input className="form-control" placeholder="email@example.com" type="email"></input>
+        <div>
+          <label> Last Name:</label>
+          <input
+            placeholder="Smith"
+            type="text"
+            value={apellido}
+            onChange={(e) => setApellido(e.target.value)}
+          />
         </div>
-
-        <div className="mb-3 col-4">
-          <label className="form-label">Comment</label>
-          <textarea className="form-control" rows="3"></textarea>
+        <div>
+          <label> Email adddress:</label>
+          <input
+            placeholder="email@example.com"
+            type="email"
+            value={correo}
+            onChange={(e) => setCorreo(e.target.value)}
+          />
         </div>
-        
+        <div>
+          <label> Comment:</label>
+          <textarea required placeholder="Comment" rows="3"></textarea>
+        </div>
+        <input
+          type="submit"
+          value="submit"
+          className="button btn btn-primary col-4"
+        />
       </div>
     </section>
   );
 }
-
-export default Contact;
