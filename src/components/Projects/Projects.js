@@ -18,15 +18,18 @@ function Projects() {
       img: tunebook,
       name: "Tunebook",
       description: "First Second",
+      href: "https://lrivales.github.io/app-toolkit/",
     },
     {
+      id:"3",
       img: famigos,
       name: "FourAmigos",
       description: "Third project",
+      href: "https://lrivales.github.io/app-toolkit/",
     },
   ];
 
-  const projectList = cards.map((card) => <Card key={card.id} card={card} />);
+  const projectList = cards.map((card) => <Card cards={card.id} card={card} />);
   return <div> {projectList}</div>;
 }
 
