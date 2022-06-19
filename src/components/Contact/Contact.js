@@ -1,24 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
+// setState?
 
-function Contact() {
+export default function Contact() {
+  const [name, setName] = useState("");
+  const [apellido, setApellido] = useState("");
+  const [correo, setCorreo] = useState("");
+
   return (
-    <section className="leftmenuinnerinner">
-      <form className="" style={{ background: "#F8F8FF" }}>
-        <h1 className="my-3"> Freddy Rakky21 </h1>
-        <p> Submit to request resume </p>
-
-        <label>Name</label>
-        <input placeholder="Name" type="text" id="name"></input>
-
-        <label>Email</label>
-        <input placeholder="email@e.com" type="email" id="email"></input>
-
-        <label>Message</label>
-        <textarea placeholder="Message" type="text" id="message"></textarea>
-        <input type="submit"></input>
-      </form>
+    <section className="container">
+      <div className="contact">
+        <h1> Contact</h1>
+        <div>
+          <label> First Name:</label>
+          <input
+            placeholder="John"
+            type="text"
+            name="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        <div>
+          <label> Last Name:</label>
+          <input
+            placeholder="Smith"
+            type="text"
+            value={apellido}
+            onChange={(e) => setApellido(e.target.value)}
+          />
+        </div>
+        <div>
+          <label> Email adddress:</label>
+          <input
+            placeholder="email@example.com"
+            type="email"
+            value={correo}
+            onChange={(e) => setCorreo(e.target.value)}
+          />
+        </div>
+        <div>
+          <label> Comment:</label>
+          <textarea required placeholder="Comment" rows="3"></textarea>
+        </div>
+        <input
+          type="submit"
+          value="submit"
+          className="button btn btn-primary col-4"
+        />
+      </div>
     </section>
   );
 }
-
-export default Contact;
