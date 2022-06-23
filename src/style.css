@@ -1,5 +1,7 @@
-/* background color : FFF0F5 */
 
+
+
+/* === NAV === */
 .nav {
   display: flex;
   background-color: #6495ED;
@@ -8,22 +10,17 @@
   padding: 12px;
 }
 
+
+
+/* === BODY === */
 body {
   font-family: Inter, sans-serif;
   text-align: center;
 }
 
-.body > .buttonz {
-  background-color: blueviolet;
-  color: aquamarine;
-  border: 0;
-  padding: 8px;
-  border-radius: 5px;
-  cursor: pointer;
 
-}
 
-/* ABOUT */
+/* === ABOUT === */
 .about {
   position: center;
   height: 100%;
@@ -40,7 +37,9 @@ body {
   border-radius: 10px;
 }
 
-/* CARDS */
+
+
+/* === CARDS === */
 .cards {
   font-size: 20px;
   vertical-align:top;
@@ -59,7 +58,9 @@ body {
   border-radius: 5px;
 }
 
-/* CONTACT */
+
+
+/* === CONTACT === */
 .contact {
   max-width: 400px;
   margin: auto;
@@ -83,12 +84,22 @@ body {
   border: 1px solid;
   box-sizing: border-box;
 }
-.contact > .button {
-  
+.contact > button {
+  background-color: blue;
   border-radius: 5px;
+
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
-/* FOOTER */
+
+
+/* === FOOTER === */
 footer {
   position: fixed;
   background-color: #6495ED;
@@ -100,6 +111,8 @@ footer {
 }
 
 
+
+/* === OTHER === */
 .center {
   text-align: center;
   display: block;
