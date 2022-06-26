@@ -3,6 +3,7 @@ import { capitalizeFirstLetter } from "../../utils/helpers";
 
 function Nav(props) {
   const { categories = [], setCurrentCategory, currentCategory } = props;
+  // const {data: intPer } = useFetch('/')
 
   useEffect(() => {
     document.title = capitalizeFirstLetter(currentCategory);

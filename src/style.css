@@ -5,6 +5,8 @@
 .nav {
   display: flex;
   background-color: #6495ED;
+  cursor: pointer;
+
 }
 .nav > h3 {
   padding: 12px;
@@ -16,6 +18,7 @@
 body {
   font-family: Inter, sans-serif;
   text-align: center;
+  
 }
 
 
@@ -83,11 +86,11 @@ body {
   margin: 10px 0;
   border: 1px solid;
   box-sizing: border-box;
+  display: block;
 }
-.contact > button {
+.contact button {
   background-color: blue;
   border-radius: 5px;
-
   border: none;
   color: white;
   padding: 10px 25px;
@@ -95,6 +98,7 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  cursor: pointer;
 }
 
 
