@@ -15,13 +15,13 @@ function App() {
 
   const showPage = () => {
     if (currentCategory === 'about Me') {
-      return <About currentCategory={currentCategory}></About>
+      return <About currentCategory={currentCategory}/>
     }
     else if (currentCategory === 'projects'){
-      return <Projects currentCategory={currentCategory}></Projects>
+      return <Projects currentCategory={currentCategory}/>
     }
     else if (currentCategory === 'contact'){
-      return <Contact currentCategory={currentCategory}></Contact>
+      return <Contact currentCategory={currentCategory}/>
     }
   }
 
@@ -30,13 +30,12 @@ function App() {
       <Nav
         categories={categories}
         currentCategory={currentCategory}
-        setCurrentCategory={setCurrentCategory}>
-      </Nav>
+        setCurrentCategory={setCurrentCategory}/>
 
       <main>
         {showPage()}
       </main>
-      <footer><Footer></Footer></footer>
+      <footer><Footer/></footer>
     </div>)
 }
 
