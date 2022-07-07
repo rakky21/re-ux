@@ -30,7 +30,7 @@ export default function Contact() {
 
   return (
     <div className="contact">
-      <h1> Contact </h1>
+      <h2> Contact </h2>
       <form onSubmit={handleSubmit}>
         <label> First Name:</label>
         <input
@@ -64,8 +64,8 @@ export default function Contact() {
           onChange={(e) => setComentario(e.target.value)}
         ></textarea>
         <p> {name}</p>
-        {!isPending && <button type="Submit"> Submit</button>}
-        {isPending && <button disabled> Loading </button>}
+        {!isPending && <button type="Submit" className="btn-primary btn col-4"> Submit</button>}
+        {isPending && <button disabled className="btn-primary btn col-4"> Loading </button>}
       </form>
     </div>
   );

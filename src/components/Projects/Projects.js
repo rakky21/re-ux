@@ -3,9 +3,10 @@ import Card from "../Card/Card.js";
 import toolkit from "../../assets/projects/toolkit.jpg";
 import tunebook from "../../assets/projects/tunebook.jpg";
 import famigos from "../../assets/projects/Famigos.jpg";
+import { useState } from "react";
 
 function Projects() {
-  const cards = [
+  const [cards, setCards] = useState([
     {
       id: "1",
       img: toolkit,
@@ -21,16 +22,19 @@ function Projects() {
       href: "https://lrivales.github.io/app-toolkit/",
     },
     {
-      id:"3",
+      id: "3",
       img: famigos,
       name: "FourAmigos",
       description: "Third project",
       href: "https://lrivales.github.io/app-toolkit/",
     },
-  ];
+  ]);
 
-  const projectList = cards.map((card) => <Card cards={card.id} card={card} />);
-  return <div> {projectList}</div>;
+  return (
+    <div className="projects">
+      <Card projectCards={cards} key={setCards} titulos="Group Projects" />
+    </div>
+  );
 }
 
 export default Projects;
