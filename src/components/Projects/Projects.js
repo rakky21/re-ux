@@ -40,9 +40,10 @@ import Card from "../Card/Card.js";
 import toolkit from "../../assets/projects/toolkit.jpg";
 import tunebook from "../../assets/projects/tunebook.jpg";
 import famigos from "../../assets/projects/Famigos.jpg";
+import { useState } from "react";
 
 function Projects() {
-  const cards = [
+  const [cards, setCards] = useState([
     {
       img: toolkit,
       name: "Toolkit",
@@ -63,10 +64,18 @@ function Projects() {
       description: "Third project",
       href: "https://lrivales.github.io/app-toolkit/",
     },
+<<<<<<< HEAD
   ];
   return (
     <div>
       <Card cards={cards} />
+=======
+  ]);
+
+  return (
+    <div className="projects">
+      <Card projectCards={cards} key={setCards} titulos="Group Projects" />
+>>>>>>> 26f5b18b12ec42639d00ab853120ed817199f9c9
     </div>
   );
 }

@@ -41,6 +41,17 @@ body {
 }
 
 
+/* === PROJECT === */
+.projects {
+  margin: auto;
+  text-align: center;
+  padding: 25px;
+  overflow-x: hidden;
+  border-radius: 5px;
+}
+
+
+
 
 /* === CARDS === */
 .cards {
@@ -76,7 +87,7 @@ body {
   text-align: left;
   display: block;
 }
-.contact > h1 {
+.contact > h2 {
   font-size: 35px;
   margin-bottom: 30px;
 }
@@ -87,18 +98,6 @@ body {
   border: 1px solid;
   box-sizing: border-box;
   display: block;
-}
-.contact button {
-  background-color: blue;
-  border-radius: 5px;
-  border: none;
-  color: white;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
 }
 
 

@@ -27,6 +27,7 @@
 
 import React from "react";
 
+<<<<<<< HEAD
 function Cards(props) {
   const cards = props.cards;
   
@@ -46,6 +47,22 @@ function Cards(props) {
             <a
               className="button btn btn-primary col-4"
               href={cards.href}
+=======
+function Card ({projectCards, titulos}) {
+
+  return (
+    <div className="flex">
+      <h2>{titulos}</h2>
+      {projectCards.map((card) => (
+        <div className="cards" key={card.id}>
+          <img src={card.img} alt="Group Project Example"/>
+          <h3>{card.name}</h3>
+          <p>{card.description}</p>
+          <div>
+            <a
+              className="btn btn-primary col-4"
+              href={card.href}
+>>>>>>> 26f5b18b12ec42639d00ab853120ed817199f9c9
               target="_blank"
               rel="noreferrer noopener"
             >
