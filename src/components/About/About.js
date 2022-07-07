@@ -23,7 +23,7 @@ function About() {
             target="_blank"
             rel="noreferrer"
             className="mb-3 me-2"
-          >
+          >  
             <FaGithub size="2em" title="GitHub" />
           </a>
           <a
