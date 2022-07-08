@@ -64,18 +64,11 @@ function Projects() {
       description: "Third project",
       href: "https://lrivales.github.io/app-toolkit/",
     },
-<<<<<<< HEAD
-  ];
-  return (
-    <div>
-      <Card cards={cards} />
-=======
   ]);
 
   return (
     <div className="projects">
       <Card projectCards={cards} key={setCards} titulos="Group Projects" />
->>>>>>> 26f5b18b12ec42639d00ab853120ed817199f9c9
     </div>
   );
 }

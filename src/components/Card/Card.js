@@ -27,27 +27,6 @@
 
 import React from "react";
 
-<<<<<<< HEAD
-function Cards(props) {
-  const cards = props.cards;
-  
-  function handleClick(e) {
-    e.preventDefault();
-  }
-
-  return (
-    <div className="cards" onSubmit={handleClick}>
-      <h2>Group projects </h2>
-      {cards.map((cards) => (
-        <div>
-          <h3>{cards.name}</h3>
-          <img src={cards.img}/>
-          <div>{cards.description}</div>
-          <div>
-            <a
-              className="button btn btn-primary col-4"
-              href={cards.href}
-=======
 function Card ({projectCards, titulos}) {
 
   return (
@@ -62,7 +41,6 @@ function Card ({projectCards, titulos}) {
             <a
               className="btn btn-primary col-4"
               href={card.href}
->>>>>>> 26f5b18b12ec42639d00ab853120ed817199f9c9
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -76,4 +54,4 @@ function Card ({projectCards, titulos}) {
   );
 }
 
-export default Cards;
+export default Card;
