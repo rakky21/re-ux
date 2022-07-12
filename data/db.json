@@ -1,0 +1,16 @@
+{
+    "personas": [
+        {
+            "name" : "John",
+            "apellido" : "Smith",
+            "correo": "e@e.com",
+            "comentario":"blah blah blahhh"
+        },
+        {
+            "name" : "John",
+            "apellido" : "Smith",
+            "correo": "e@e.com",
+            "comentario":"blah blah blahhh"
+        }
+    ]
+}

@@ -49,6 +49,7 @@ function Projects() {
       name: "Toolkit",
       description: "First project",
       href: "https://lrivales.github.io/app-toolkit/",
+      group:"Group",
     },
     {
       id: "2",
@@ -56,6 +57,7 @@ function Projects() {
       name: "Tunebook",
       description: "First Second",
       href: "https://lrivales.github.io/app-toolkit/",
+      group:"Group",
     },
     {
       id: "3",
@@ -63,12 +65,23 @@ function Projects() {
       name: "FourAmigos",
       description: "Third project",
       href: "https://lrivales.github.io/app-toolkit/",
+      group:"Group",
+    },
+    {
+      id: "4",
+      img: tunebook,
+      name: "Starsmaid",
+      description: "This is the fourh project",
+      href: "https://lrivales.github.io/app-toolkit/",
+      group:"Others",
     },
   ]);
 
   return (
     <div className="projects">
-      <Card projectCards={cards} key={setCards} titulos="Group Projects" />
+      {/* <Card projectCards={cards} key={setCards} titulos="Group Projects" /> */}
+      <Card projectCards={cards.filter((card) => card.group === "Group")} key={setCards} titulos="Group Projects" />
+      <Card projectCards={cards.filter((card) => card.group === "Others")} key={setCards} titulos="Other Projects" />
     </div>
   );
 }

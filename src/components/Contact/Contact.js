@@ -14,6 +14,9 @@ export default function Contact() {
     e.preventDefault();
     const intPer = { name, apellido, correo, comentario };
 
+    // useEffect(() =>{
+    // }, [handleSubmit])
+
     setIsPending(true);
 
     fetch("http://localhost:3000/?", {
@@ -25,8 +28,6 @@ export default function Contact() {
       setIsPending(false);
     });
   };
-
-  // setIsPending(true);
 
   return (
     <div className="contact">
