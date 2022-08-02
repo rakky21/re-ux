@@ -15,8 +15,11 @@ function About() {
         <div className="card-body">
           <h1 className="card-title border-bottom"> Freddy </h1>
           <p className="card-text my-2">
-            I'm Freddy and this is my Portfolio <br /> These are the group and
-            personal projects.
+            I'm Freddy and this is my Portfolio <br /> I am a Full-Stack
+            Developer. I have work experience in React, Javascript, CSS, HTML,
+            etc.
+            <br />I am experienced in JavaScript, React, back- & front-end
+            development. These are the group and personal projects.
           </p>
           <a
             href="https://github.com/rakky21"

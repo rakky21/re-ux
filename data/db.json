@@ -1,9 +1,8 @@
 {
-  "personas":{
-    "name":"Nombre",
-    "apellido":"Apellido",
-    "correo": "email",
+  "personas": {
+    "name": "Name2",
+    "apellido": "Last",
+    "correo": "e@e.com",
     "comentario": "comment"
   }
-  
 }
