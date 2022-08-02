@@ -23,7 +23,8 @@ export default function Contact() {
       mode: 'cors',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(personas),
-    }).then(() => {
+    }).then((res) => res.json())
+    .then ((data) => {
       console.log("new entry");
       setIsPending(false);
     });
