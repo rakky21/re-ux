@@ -5,9 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "client":"cd client && npm start",
-    "demon" : "concurrently -n 'server,client' -c 'blue, green'\"nodemon server.js\" npm run perfil"
-  },got 
+    "client":"cd perfil && npm start",
+    "demon" : "concurrently \"nodemon server.js\" npm start perfil"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
