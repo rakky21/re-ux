@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { useHistory } from "react-router-dom";
+import axios from "axios";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -7,32 +7,35 @@ export default function Contact() {
   const [correo, setCorreo] = useState("");
   const [comentario, setComentario] = useState("");
   const [isPending, setIsPending] = useState(false);
-  // const history = useHistory();
 
-  // prevent from making duplicates
-  const handleSubmit = (e) => {
+  // const [personas, setPersonas] = useState(null);
+
+  const getPersonas = (e) => {
     e.preventDefault();
-    const intPer = { name, apellido, correo, comentario };
-
-    // useEffect(() =>{
-    // }, [handleSubmit])
-
     setIsPending(true);
-
-    fetch("http://localhost:3000/?", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(intPer),
-    }).then(() => {
-      console.log("New request submitted");
-      setIsPending(false);
-    });
+    axios
+      .post("http://localhost:3001/personas")
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
+  // const getPersonas = (e) => {
+  //   e.preventDefault();
+  //   setIsPending(true);
+  //   fetch("http://localhost:3001/personas")
+  //     .then((res) => res.json())
+  //     .then((personas) => {
+  //       // setPersonas();
+  //     });
+  // };
   return (
     <div className="contact">
       <h2> Contact </h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={getPersonas}>
         <label> First Name:</label>
         <input
           required
@@ -65,8 +68,15 @@ export default function Contact() {
           onChange={(e) => setComentario(e.target.value)}
         ></textarea>
         <p> {name}</p>
-        {!isPending && <button type="Submit" className="btn-primary btn col-4"> Submit</button>}
-        {isPending && <button disabled className="btn-primary btn col-4"> Loading </button>}
+        {!isPending && (
+          <button className="btn-primary btn col-4"> Submit</button>
+        )}
+        {isPending && (
+          <button disabled className="btn-primary btn col-4">
+            {" "}
+            Loading{" "}
+          </button>
+        )}
       </form>
     </div>
   );

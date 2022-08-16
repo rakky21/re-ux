@@ -45,6 +45,7 @@ import { useState } from "react";
 function Projects() {
   const [cards, setCards] = useState([
     {
+      id:"1",
       img: toolkit,
       name: "Toolkit",
       description: "First project",
@@ -80,8 +81,8 @@ function Projects() {
   return (
     <div className="projects">
       {/* <Card projectCards={cards} key={setCards} titulos="Group Projects" /> */}
-      <Card projectCards={cards.filter((card) => card.group === "Group")} key={setCards} titulos="Group Projects" />
-      <Card projectCards={cards.filter((card) => card.group === "Others")} key={setCards} titulos="Other Projects" />
+      <Card projectCards={cards.filter((card) => card.group === "Group")} key={setCards.id} titulos="Group Projects" />
+      <Card projectCards={cards.filter((card) => card.group === "Others")} key={setCards.id} titulos="Other Projects" />
     </div>
   );
 }
