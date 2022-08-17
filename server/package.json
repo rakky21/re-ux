@@ -5,8 +5,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "client":"cd perfil && npm start",
-    "demon" : "concurrently \"nodemon server.js\" npm start perfil"
+    "client":"cd client && npm start",
+    "demon" : "concurrently \"nodemon server.js\" npm start client",
+    "start-dev": "source dev.env; node server.js",
+    "start-prod": "source prod.env; node server.js"
   },
   "keywords": [],
   "author": "",
