@@ -91,7 +91,14 @@ body {
   font-size: 35px;
   margin-bottom: 30px;
 }
+
+.message {
+  font-size: 1.2em;
+  text-align: center;
+  color: #36a936;
+}
 .contact > input, .about > textarea {
+  text-align: left;
   width: 100px;
   padding: 6px;
   margin: 10px 0;
