@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import axios from "axios";
+import { useState } from "react";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -8,30 +7,30 @@ export default function Contact() {
   const [comentario, setComentario] = useState("");
   const [isPending, setIsPending] = useState(false);
 
-  // const [personas, setPersonas] = useState(null);
-
-  const getPersonas = (e) => {
+  function getPersonas(e) {
     e.preventDefault();
     setIsPending(true);
-    axios
-      .post("http://localhost:3001/personas")
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
 
-  // const getPersonas = (e) => {
-  //   e.preventDefault();
-  //   setIsPending(true);
-  //   fetch("http://localhost:3001/personas")
-  //     .then((res) => res.json())
-  //     .then((personas) => {
-  //       // setPersonas();
-  //     });
-  // };
+    const personas = {
+      name: name,
+      apellido: apellido,
+      correo: correo,
+      comentario: comentario,
+    };
+
+    fetch("http://localhost:3001/personas", {
+      method: "POST",
+      mode: "cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(personas),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("new entry");
+        setIsPending(false);
+      });
+  }
+
   return (
     <div className="contact">
       <h2> Contact </h2>

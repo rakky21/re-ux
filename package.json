@@ -22,7 +22,8 @@
   "scripts": {
     "start": "react-scripts start node index.js",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "demon" : "concurrently \"nodemon server.js\" '\npm start client\""
   },
   "eslintConfig": {
     "extends": [

@@ -5,9 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "client":"cd client && npm start",
-    "demon" : "concurrently \"nodemon server.js\" npm start client"
-  },
+    "client":"cd client && npm start"
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",
