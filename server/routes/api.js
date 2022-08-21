@@ -2,6 +2,9 @@ const express = require("express");
 const router = express.Router();
 const CreateComentario = require("../models/createComentario");
 
+// SAVING DATA TO OUR MONGO DATABASE
+const data = [];
+
 // ROUTES
 router.get("/", (req, res) => {
   CreateComentario.find({})
