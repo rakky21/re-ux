@@ -30,9 +30,10 @@
   },
   "scripts": {
     "start": "node server/server.js",
-    "demon": "concurrently -n 'server,client' -c red, green \"cd server && npm run watch\" \"cd client && npm start\" \"nodemon server.js \"",
+    "demon": "concurrently \"cd server && npm run watch\" \"cd client && npm start\" \"nodemon server.js \"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
+    "uninstall-cliente": "cd client && npm install",
     "build": "cd client && npm run build"
   },
   "eslintConfig": {
