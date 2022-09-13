@@ -38,12 +38,6 @@
     "watch": "webpack --watch --progress",
     "demon": "concurrently \"cd server && npm run watch\" \"cd client && npm start\" \"nodemon server.js \""
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
