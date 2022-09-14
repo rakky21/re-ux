@@ -1,4 +1,5 @@
 const express = require("express");
+const ComentarioPost = require("../models/createComentario");
 const router = express.Router();
 const CreateComentario = require("../models/createComentario");
 
@@ -7,7 +8,7 @@ const data = [];
 
 // ROUTES
 router.get("/", (req, res) => {
-  CreateComentario.find({})
+  ComentarioPost.find({})
     .then((data) => {
       console.log("Data: ", data);
       res.json(data);
