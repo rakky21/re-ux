@@ -7,3 +7,5 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/perfil", {
 mongoose.connection.on("connected", () => {
   console.log("Mongo is connected");
 });
+
+module.exports = mongoose.connection;
