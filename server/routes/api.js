@@ -1,14 +1,14 @@
 const express = require("express");
-const ComentarioPost = require("../models/createComentario");
+const RequisitoPost = require("../models/requisito");
 const router = express.Router();
-const CreateComentario = require("../models/createComentario");
+const CreateRequisito = require("../models/requisito");
 
 // SAVING DATA TO OUR MONGO DATABASE
 const data = [];
 
 // ROUTES
 router.get("/", (req, res) => {
-  ComentarioPost.find({})
+  RequisitoPost.find({})
     .then((data) => {
       console.log("Data: ", data);
       res.json(data);
@@ -29,7 +29,7 @@ router.get("/name", (req, res) => {
 router.post("/save", (req, res) => {
   console.log("Body", req.body);
   const data = req.body;
-  const newCreateComentario = new CreateComentario(data);
+  const newCreateComentario = new CreateRequisito(data);
 
   newCreateComentario.save((err) => {
     if (err) {

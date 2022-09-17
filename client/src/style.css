@@ -1,6 +1,4 @@
 
-
-
 /* === NAV === */
 .nav {
   display: flex;
@@ -12,16 +10,11 @@
   padding: 12px;
 }
 
-
-
 /* === BODY === */
 body {
   font-family: Inter, sans-serif;
-  text-align: center;
-  
+  text-align: center;  
 }
-
-
 
 /* === ABOUT === */
 .about {
@@ -40,7 +33,6 @@ body {
   border-radius: 10px;
 }
 
-
 /* === PROJECT === */
 .projects {
   margin: auto;
@@ -49,9 +41,6 @@ body {
   overflow-x: hidden;
   border-radius: 5px;
 }
-
-
-
 
 /* === CARDS === */
 .cards {
@@ -71,8 +60,6 @@ body {
   width: 300px;
   border-radius: 5px;
 }
-
-
 
 /* === CONTACT === */
 .contact {
@@ -107,8 +94,6 @@ body {
   display: block;
 }
 
-
-
 /* === FOOTER === */
 footer {
   position: fixed;
@@ -119,8 +104,6 @@ footer {
   opacity: 75%;
   bottom: 0px;
 }
-
-
 
 /* === OTHER === */
 .center {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -13,14 +13,14 @@ export default function Contact() {
   const getPersonas = (e) => {
     e.preventDefault();
     setIsPending(true);
-    axios
-      .post("http://localhost:3001/personas")
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    // axios
+    //   .post("http://localhost:3001/personas")
+    //   .then((res) => {
+    //     console.log(res);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
   };
   return (
     <div className="contact">
