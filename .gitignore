@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/server/node_modules
+/client/node_modules
 /.pnp
 .pnp.js
 
@@ -14,6 +16,7 @@ cara.jpg
 /build
 
 # misc
+.env
 .DS_Store
 .env.local
 .env.development.local
