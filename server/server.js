@@ -6,6 +6,7 @@ const morgan = require("morgan");
 const routes = require("./routes/api");
 const path = require("path");
 
+// EXPRESS SERVER
 const app = express();
 const PORT = process.env.PORT || 8080;
 

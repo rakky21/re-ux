@@ -22,16 +22,6 @@ export default function Contact() {
         console.log(error);
       });
   };
-
-  // const getPersonas = (e) => {
-  //   e.preventDefault();
-  //   setIsPending(true);
-  //   fetch("http://localhost:3001/personas")
-  //     .then((res) => res.json())
-  //     .then((personas) => {
-  //       // setPersonas();
-  //     });
-  // };
   return (
     <div className="contact">
       <h2> Contact </h2>
@@ -67,7 +57,10 @@ export default function Contact() {
           value={comentario}
           onChange={(e) => setComentario(e.target.value)}
         ></textarea>
-        <p> {name}</p>
+        <div>
+          
+        </div>
+        {/* <br/> */}
         {!isPending && (
           <button className="btn-primary btn col-4"> Submit</button>
         )}
