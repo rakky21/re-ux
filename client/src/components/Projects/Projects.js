@@ -1,10 +1,5 @@
 import React from "react";
 import Card from "../Card/Card.js";
-<<<<<<< HEAD
-import toolkit from "../../assets/projects/toolkit.jpg";
-import tunebook from "../../assets/projects/tunebook.jpg";
-import famigos from "../../assets/projects/famigos.jpg";
-=======
 
 const {
   toolkit,
@@ -13,7 +8,6 @@ const {
   tempora,
 } = require("../../assets/projects/ListadeFotos");
 
->>>>>>> 2ce70c34c5e428f3848f880d58b8889d8b6f5040
 import { useState } from "react";
 
 function Projects() {
