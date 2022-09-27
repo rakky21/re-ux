@@ -12,6 +12,10 @@ export default function Contact() {
   const getPersonas = (e) => {
     e.preventDefault();
     setIsPending(true);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2ce70c34c5e428f3848f880d58b8889d8b6f5040
   };
   return (
     <div className="contact">
