@@ -48,9 +48,7 @@ export default function Contact() {
           value={comentario}
           onChange={(e) => setComentario(e.target.value)}
         ></textarea>
-        <div>
-          
-        </div>
+        <div></div>
         {/* <br/> */}
         {!isPending && (
           <button className="btn-primary btn col-4"> Submit</button>
