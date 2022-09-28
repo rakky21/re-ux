@@ -5,7 +5,7 @@ function Footer() {
     <footer className="footer">
       <ul>
         <a className="text-muted " href="/">
-          &copy; Cribas Development
+          &copy;{new Date().getFullYear()} Cribas Development
         </a>
         <br />
         All Rights Reserved
