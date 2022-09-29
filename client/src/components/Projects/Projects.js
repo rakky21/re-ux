@@ -47,7 +47,7 @@ function Projects() {
     {
       id: 5,
       img: tempora,
-      name: "Weather App",
+      name: "Weather",
       description: "This app will display the weather of your desired city",
       href: "https://rakky21.github.io/tempora/",
       group: "Snippits",

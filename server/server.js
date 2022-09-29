@@ -7,6 +7,9 @@ const { authMiddleware } = require("./utils/auth");
 const db = require("./config/connection");
 
 const morgan = require("morgan");
+import postRoutes from './routes/post'
+app.use('/post', postRoutes)
+const helpers = require("./utils/helpers");
 
 // EXPRESS SERVER
 const PORT = process.env.PORT || 3001;
@@ -39,7 +42,7 @@ app.get("*", (req, res) => {
 
 db.once("open", () => {
   app.listen(PORT, () => {
-    console.log(`API server running on port ${PORT}!`);
+    console.log(`🌍 API server running on port ${PORT}!`);
   });
 });
 //  HTTP request logger
