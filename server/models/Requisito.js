@@ -21,12 +21,11 @@ const requisitoSchema = new Schema(
   },
   {
     toJSON: {
-      virtuals: true,
       getters: true,
     },
-    id: false
   }
 );
-const PostComentario = model("Requisito", requisitoSchema);
 
-module.exports = PostComentario;
+const Requisito = model("Requisito", requisitoSchema);
+
+module.exports = Requisito;
