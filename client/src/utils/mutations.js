@@ -31,3 +31,13 @@ mutation addRequisito($comentario: String!) {
         usuario
     }
 }`;
+
+export const ADD_COMENTARIO = gql`
+mutation addComentario($commentario: String!) {
+  addComentario(comentario: $comentario) {
+    _id
+    comentario
+    createdAt
+    usuario
+  }
+}`;

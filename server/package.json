@@ -8,6 +8,7 @@
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon server.js",
+    "seed": "cd server/config && npm run seed",
     "client": "cd client && npm start"
   },
   "keywords": [],

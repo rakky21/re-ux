@@ -19,7 +19,7 @@ export const QUERY_REQUISITO = gql`
   query requisito($requisito: String!) {
     _id
     usuario
-    comnetario
+    comentario
     createdAt
   }
 `;
@@ -34,6 +34,13 @@ export const QUERY_REQUISITOS = gql`
     }
   }
 `;
+
+export const QUERY_COMENTARIO = gql`
+query comentario($requisito: String) {
+  usuario
+  comentario
+  createdAt
+}`
 
 export const QUERY_ME = gql`
   {

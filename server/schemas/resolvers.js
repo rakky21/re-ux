@@ -20,13 +20,17 @@ const resolvers = {
     user: async (parent, { usuario }) => {
       return User.findOne({ usuario })
         .select("-___V -password")
-        .populate("requisitos");
+        .populate("requisitos")
+        .populate("comentario");
     },
     requisitos: async () => {
       return Requisito.find().select("");
     },
     requisito: async (parent, { _id }) => {
       return Requisito.findOne({ _id });
+    },
+    comentario: async (parent, { _id }) => {
+      return await Comentario.findById(_id).populate("text");
     },
   },
 
