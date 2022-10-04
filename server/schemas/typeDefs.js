@@ -6,31 +6,33 @@ const typeDefs = gql`
     usuario: String
     apellido: String
     correo: String
-    requisitos: [Requisito]
+    requisitos: String
   }
+  
   type Requisito {
     _id: ID
-    comentario: String
     createdAt: String
     usuario: String
-  }
-  type Query {
-    me: User
-    users: [User]
-    user(usuario: String!): User
-    requisitos(usuario: String): [Requisito]
-    requisito(_id: ID!): Requisito
-  }
-
-  type Mutation {
-    login(correo: String!, contracena: String!): Auth
-    addUser(usuario: String!, correo: String!, contracena: String!): Auth
-    addRequisito(comentario: String!): Requisito
+    comentario: String
   }
 
   type Auth {
     token: ID!
     user: User
+  }
+
+  type Query {
+    me: User
+    user(usuario: String!): User
+    users: [User]
+    requisito(_id: ID!): Requisito
+    requisitos(usuario: String): Requisito
+  }
+
+  type Mutation {
+    login(correo: String!, password: String!): Auth
+    addUser(usuario: String!, correo: String!, password: String!): Auth
+    addRequisito(comentario: String!): Requisito
   }
 `;
 

@@ -9,14 +9,14 @@ export default function Contact() {
 
   // const [personas, setPersonas] = useState(null);
 
-  const getPersonas = (e) => {
+  const Requisito = (e) => {
     e.preventDefault();
     setIsPending(true);
   };
   return (
     <div className="contact">
       <h2> Contact </h2>
-      <form onSubmit={getPersonas}>
+      <form onSubmit={Requisito}>
         <label> First Name:</label>
         <input
           required
