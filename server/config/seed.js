@@ -5,20 +5,20 @@ db.once("open", async () => {
   await Requisito.deleteMany({});
   await User.deleteMany({});
 
-  const requisitoData = [];
-  const createdRequisitos = await Requisitos.collection.insetMany(
-    requisitoData
-  );
+  // const requisitoData = [];
+  // const createdRequisitos = await Requisitos.collection.insetMany(
+  //   requisitoData
+  // );
 
   const userData = [];
 
-  for (let i = 0; i < 50; i += 1) {
-    const usuario = faker.internet.usuario();
-    const correo = faker.internet.correo(usuario);
-    const password = faker.internet.password();
+  // for (let i = 0; i < 50; i += 1) {
+  //   const usuario = faker.internet.usuario();
+  //   const correo = faker.internet.correo(usuario);
+  //   const password = faker.internet.password();
 
-    userData.push({ usuario, correo, password });
-  }
+  //   userData.push({ usuario, correo, password });
+  // }
 
   const createdUsers = await User.collection.insertMany(userData);
 
@@ -35,7 +35,21 @@ db.once("open", async () => {
     }
     await Requisito.updateOne({ _id: requisitoId }, { $addToSet: {} });
   }
+  await User.create({
+    name: 'Elijah',
+    apellido: 'Holt',
+    correo: 'eholt@testmail.com',
+    contracena: 'password12345',
+    comentarios: "this is the first comment"
+  });
   
-  console.log("Seeding completed");
-  process.exit(0);
+
+  await Requisito.create({
+    usuario: 'Lissandra',
+    comentario: 'esto es el comentario'
+  })
+  console.log('users seeded');
+
+  // console.log("Seeding completed");
+  process.exit();
 });
