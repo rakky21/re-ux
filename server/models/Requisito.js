@@ -12,14 +12,18 @@ const requisitoSchema = new Schema(
       type: Date,
       default: Date.now,
       get: (timestamp) => dateFormat(timestamp),
-    }
+    },
+    comentario: {
+      type: String,
+      require: true,
+    },
   },
   {
     toJSON: {
       virtuals: true,
       getters: true,
     },
-    id: false
+    id: false,
   }
 );
 const Requisito = model("Requisito", requisitoSchema);

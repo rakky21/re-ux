@@ -21,10 +21,12 @@ const startServer = async () => {
     resolvers,
     context: authMiddleware,
   });
+  await startServer();
   server.applyMiddleware({ app });
   console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
 };
-startServer();
+
+// startServer();
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -40,6 +42,3 @@ db.once("open", () => {
     console.log(`🌍 API server running on port ${PORT}!`);
   });
 });
-
-
-

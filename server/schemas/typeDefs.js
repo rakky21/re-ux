@@ -8,7 +8,7 @@ const typeDefs = gql`
     correo: String
     requisitos: String
   }
-  
+
   type Requisito {
     _id: ID
     createdAt: String
@@ -27,12 +27,19 @@ const typeDefs = gql`
     users: [User]
     requisito(_id: ID!): Requisito
     requisitos(usuario: String): Requisito
+    comentario(text: String!): String!
   }
 
   type Mutation {
     login(correo: String!, password: String!): Auth
-    addUser(usuario: String!, correo: String!, password: String!): Auth
-    addRequisito(comentario: String!): Requisito
+    addUser(
+      usuario: String!
+      apellido: String!
+      correo: String!
+      password: String!
+    ): Auth
+    addRequisito(usuario: String!, comentario: String!): Requisito
+    updateRequisito( comentario: String!): Requisito
   }
 `;
 

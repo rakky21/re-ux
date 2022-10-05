@@ -20,17 +20,13 @@ const resolvers = {
     user: async (parent, { usuario }) => {
       return User.findOne({ usuario })
         .select("-___V -password")
-        .populate("requisitos")
-        .populate("comentario");
+        .populate("requisitos");
     },
     requisitos: async () => {
       return Requisito.find().select("");
     },
     requisito: async (parent, { _id }) => {
       return Requisito.findOne({ _id });
-    },
-    comentario: async (parent, { _id }) => {
-      return await Comentario.findById(_id).populate("text");
     },
   },
 
@@ -62,6 +58,7 @@ const resolvers = {
         const requisito = await Requisito.create({
           ...args,
           usuario: context.user.usuario,
+          //
         });
         await User.findByIdAndUpdate(
           { _id: context.user._id },

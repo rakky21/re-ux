@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "main": "server.js",
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.20"
   },
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon server.js",
-    "seed": "cd server/config && npm run seed",
+    "seed": "node config/seed.js",
     "client": "cd client && npm start"
   },
   "keywords": [],

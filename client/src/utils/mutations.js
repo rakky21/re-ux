@@ -23,21 +23,12 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_REQUISITO = gql`
-mutation addRequisito($comentario: String!) {
+  mutation addRequisito($comentario: String!) {
     addRequisito(comentario: $comentario) {
-        _id
-        comentario
-        createdAt
-        usuario
+      _id
+      createdAt
+      text
     }
-}`;
-
-export const ADD_COMENTARIO = gql`
-mutation addComentario($commentario: String!) {
-  addComentario(comentario: $comentario) {
-    _id
-    comentario
-    createdAt
-    usuario
   }
-}`;
+`;
+

@@ -8,6 +8,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+import { onError } from "@apollo/client/link/error";
 
 import Nav from "./components/Nav/Nav";
 import About from "./components/About/About";
@@ -16,7 +17,7 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 
 const httpLink = createHttpLink({
-  uri: "/graphql",
+  uri: "https://localhost:3001/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -51,18 +52,18 @@ function App() {
 
   return (
     // <ApolloClient client={client}>
-      <div>
-        <Nav
-          categories={categories}
-          currentCategory={currentCategory}
-          setCurrentCategory={setCurrentCategory}
-        />
+    <div>
+      <Nav
+        categories={categories}
+        currentCategory={currentCategory}
+        setCurrentCategory={setCurrentCategory}
+      />
 
-        <main>{showPage()}</main>
-        <footer>
-          <Footer />
-        </footer>
-      </div>
+      <main>{showPage()}</main>
+      <footer>
+        <Footer />
+      </footer>
+    </div>
     // </ApolloClient>
   );
 }
