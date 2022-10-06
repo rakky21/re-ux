@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { useQuery } from "@apollo/client";
+import React, { useState, useEffect } from "react";
+import { ADD_REQUISITO } from "../../utils/mutations";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -9,10 +11,15 @@ export default function Contact() {
 
   // const [personas, setPersonas] = useState(null);
 
-  const Requisito = (e) => {
-    e.preventDefault();
-    setIsPending(true);
-  };
+  // const Requisito = (e) => {
+  //   e.preventDefault();
+  //   setIsPending(true);
+  // };
+  const { error, loading, data } = useQuery(ADD_REQUISITO);
+  useEffect(() => {
+    console.log(data);
+  }, []);
+
   return (
     <div className="contact">
       <h2> Contact </h2>
