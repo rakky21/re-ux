@@ -8,9 +8,15 @@
     "install": "cd server && npm i && cd ../client && npm i",
     "build": "cd client && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< HEAD
     "client":"cd client && npm start",
     "demon" : "concurrently \"nodemon server.js\" npm start client"
   },
+=======
+    "start": "node server.js",
+    "client":"cd client && npm start"
+    },
+>>>>>>> fcff2ae7b9fecc7644fffbb28fc56ac4f96612e7
   "keywords": [],
   "author": "",
   "license": "ISC",
