@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "re-ux",
   "version": "1.0.0",
   "main": "serve/server",
@@ -24,9 +23,6 @@
   "description": "", 
   "devDependencies": {
     "axios": "^0.27.2",
-=======
-  "dependencies": {
->>>>>>> fcff2ae7b9fecc7644fffbb28fc56ac4f96612e7
     "concurrently": "^7.3.0",
     "express": "^4.18.1",
     "mongoose": "^6.5.1",
