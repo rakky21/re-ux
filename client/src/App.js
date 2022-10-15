@@ -16,6 +16,7 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home";
 
 const errorLink = onError(({ graphqlErrors, networkError }) => {
   if (graphqlErrors) {
@@ -45,6 +46,14 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
+function App() {
+  return (
+    <ApolloProvider client={client}>
+      <Home />
+    </ApolloProvider>
+  );
+}
+export default App;
 
 // function App() {
 //   const categories = ["about Me", "projects", "contact"];
@@ -60,13 +69,6 @@ const client = new ApolloClient({
 //     }
 //   };
 
-function App() {
-  return (
-    <ApolloProvider client={client}>
-      <getUsers />
-    </ApolloProvider>
-  );
-}
 //   return (
 //     <div>
 //       <Nav
@@ -83,4 +85,4 @@ function App() {
 //   );
 // }
 
-export default App;
+// export default App;

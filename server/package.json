@@ -6,7 +6,7 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js && watch",
     "watch": "nodemon server.js",
     "seed": "node config/seed.js",
     "client": "cd client && npm start"

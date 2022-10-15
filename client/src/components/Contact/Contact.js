@@ -1,4 +1,4 @@
-import { useQuery } from "@apollo/client";
+import { useMutation, useQuery } from "@apollo/client";
 import React, { useState, useEffect } from "react";
 import { ADD_REQUISITO } from "../../utils/mutations";
 
@@ -9,19 +9,34 @@ export default function Contact() {
   const [comentario, setComentario] = useState("");
   const [isPending, setIsPending] = useState(false);
 
-  // const [personas, setPersonas] = useState(null);
+  const { addRequisito } = useQuery(ADD_REQUISITO);
 
-  // const Requisito = (e) => {
-  //   e.preventDefault();
-  //   setIsPending(true);
-  // };
-  const { error, loading, data } = useQuery(ADD_REQUISITO);
+  const Requisito = () => {
+    addRequisito({
+      variables: {
+        name: name,
+        apellido: apellido,
+        correo: correo,
+        comentario: comentario,
+      },
+    });
+    if (error) {
+      console.log(error);
+    }
+  };
   useEffect(() => {
-    console.log(data);
+    if (data) {
+      setUser(data.getAllUsers);
+    }
   }, []);
 
   return (
     <div className="contact">
+      <div>
+        {requistos.map((val) => {
+          return <h1> {val.name}</h1>;
+        })}
+      </div>
       <h2> Contact </h2>
       <form onSubmit={Requisito}>
         <label> First Name:</label>
