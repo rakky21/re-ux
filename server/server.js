@@ -1,33 +1,42 @@
 const express = require("express");
-const mongoose = require("mongoose");
+const { ApolloServer } = require("apollo-server-express");
 const path = require("path");
+const db = require("./config/connection");
+const { authMiddleware } = require("./utils/auth");
 const morgan = require("morgan");
 
-const routes = require("./routes/api");
+const { typeDefs, resolvers } = require("./schemas");
+
+const graphql = require("graphql");
+const { graphqlHTTP } = require("express-graphql");
+
+const PORT = process.env.PORT || 3001;
 const app = express();
-const PORT = process.env.PORT || 8080;
 
-const MONGODB_URI = "";
+app.use(morgan("tiny"));
 
-mongoose.connect(MONGODB_URI || "mongodb://localhost/personas", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-mongoose.connection.on("connected", () => {
-  console.log("Mongo is connected");
-});
-
-// SAVING DATA TO OUR MONGO DATABASE
-const data = {
-  title: "someting",
-  body: "something",
+const startServer = async () => {
+  const server = new ApolloServer({
+    typeDefs,
+    resolvers,
+    context: authMiddleware,
+  });
+  await startServer();
+  server.applyMiddleware({ app });
+  console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
 };
 
-app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
-//  HTTP request logger
-app.use(morgan("tiny"));
-app.use("/api", routes);
-
-app.listen(PORT, console.log(`server is starting ${PORT}`));
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../client/build")));
+}
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
+db.once("open", () => {
+  app.listen(PORT, () => {
+    console.log(`🌍 API server running on port ${PORT}!`);
+  });
+});
