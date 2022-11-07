@@ -1,12 +1,10 @@
 const express = require("express");
-const { ApolloServer } = require("apollo-server-express");
+const { ApolloServer, gql } = require("apollo-server-express");
 const path = require("path");
 const db = require("./config/connection");
 const { authMiddleware } = require("./utils/auth");
 const morgan = require("morgan");
-
 const { typeDefs, resolvers } = require("./schemas");
-
 const graphql = require("graphql");
 const { graphqlHTTP } = require("express-graphql");
 
@@ -16,6 +14,8 @@ const app = express();
 app.use(morgan("tiny"));
 
 const startServer = async () => {
+  const app = express();
+
   const server = new ApolloServer({
     typeDefs,
     resolvers,
