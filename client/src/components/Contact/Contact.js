@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 
 export default function Contact() {
@@ -10,14 +11,23 @@ export default function Contact() {
   function getPersonas(e) {
     e.preventDefault();
     setIsPending(true);
+=======
+import React from "react";
+import { AiOutlineMail } from "react-icons/ai";
 
-    const personas = {
-      name: name,
-      apellido: apellido,
-      correo: correo,
-      comentario: comentario,
-    };
+function Contact() {
+  return (
+    <section id="contact">
+      <h2> CONTACT ME </h2>
+      <div className="contact">
+        <label> Name </label>
+        <input></input>
+>>>>>>> 2bc258d13c370ffb9b233e0f98b7c4d2943510ee
 
+        <label> Last Name </label>
+        <input></input>
+
+<<<<<<< HEAD
     fetch("http://localhost:3001/personas", {
       method: "POST",
       mode: "cors",
@@ -30,59 +40,22 @@ export default function Contact() {
         setIsPending(false);
       });
   }
-
-  return (
-    <div className="contact">
-      <div>
-        {requistos.map((val) => {
-          return <h1> {val.name}</h1>;
-        })}
-      </div>
-      <h2> Contact </h2>
-      <form onSubmit={Requisito}>
-        <label> First Name:</label>
-        <input
-          required
-          placeholder="John"
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <label> Last Name</label>
-        <input
-          required
-          placeholder="Smith"
-          type="text"
-          value={apellido}
-          onChange={(e) => setApellido(e.target.value)}
-        />
+=======
         <label> Email </label>
-        <input
-          required
-          placeholder="email@email.com"
-          type="text"
-          value={correo}
-          onChange={(e) => setCorreo(e.target.value)}
-        />
-        <label> Comment</label>
-        <textarea
-          placeholder="Comment"
-          typeof="text"
-          value={comentario}
-          onChange={(e) => setComentario(e.target.value)}
-        ></textarea>
-        <div></div>
-        {/* <br/> */}
-        {!isPending && (
-          <button className="btn-primary btn col-4"> Submit</button>
-        )}
-        {isPending && (
-          <button disabled className="btn-primary btn col-4">
-            {" "}
-            Loading{" "}
-          </button>
-        )}
-      </form>
-    </div>
+        <input></input>
+
+        <textarea></textarea>
+>>>>>>> 2bc258d13c370ffb9b233e0f98b7c4d2943510ee
+
+        <div>
+          {" "}
+          <a className="btn" href="email">
+            <AiOutlineMail size="2rem" /> Contact Me{" "}
+          </a>
+        </div>
+      </div>
+    </section>
   );
 }
+
+export default Contact;

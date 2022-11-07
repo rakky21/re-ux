@@ -1,45 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');;
 
+/* === GEN === */
+
+:root {
+  --transition: all 500ms ease;
+
+  --color-bg: rgba(245,245,245);
+  --color-bg2: rgba(255,250,250);
+  --color-bg3: rgba(245,255,250);
+  --color-bg4: rgba(0,0,139);
+  --color-letter-primary: rgba(255, 99, 71);  
+  --color-letter-secondary: rgba(255,160,122);
+  --color-letter-third: rgba(255,182,193);
+  --color-magentaDark: rgba(139,0,139);
+  --color-pretty-blue: rgba(100,149,237);
+  --color-letter-alert: rgba(240,128,128);
+  --color-letter-alert: rgba(178,34,34);
+  --color-letter-alert: rgba(220,20,60);
+  
+  --container-width-lg: 75%;
+  --container-wigth-md: 86%;
+  --container-wigth-sm: 90%;
+}
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5 {
+  font-weight: 500;
+}
+h1 {
+  font-size: 2.5rem;
+}
+section { 
+  margin-top:  6rem;
+  opacity: 85%;
+  border-radius: 10rem;
+}
+section > h2, section > h3 {
+  text-align: center;
+  color: var(--color-letter-secondary);
+  margin-bottom: 1.5rem;
+}
+.text-light{
+  color: var(--color-letter-alert);
+}
+a {
+  color: var(--color-letter-primary);
+  transition: var(--transition);
+}
+.btn {
+  width: max-content;
+  display: inline-block;
+  background-color: var(--color-pretty-blue);
+  padding: 0.65rem 1.5rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid; 
+}
+.btn:hover{
+  background: var(--color-bg3);
+  background-color: var(--color-letter-third);
+}
+.btn-primary {
+  background: var(--color-letter-alert);
+  color: var(--color-bg2);
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+html{
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+img{
+  width: 100%;
+  object-fit: cover;
+}
 /* === NAV === */
 .nav {
   display: flex;
   background-color: #6495ED;
   cursor: pointer;
-
-}
-.nav > h3 {
-  padding: 12px;
+  padding: 0.60rem .75rem;
+  gap: 0.75rem;
+  font-size: 200%;
 }
 
 /* === BODY === */
 body {
-  font-family: Inter, sans-serif;
-  text-align: center;  
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background: var(--color-bg);
+  color: var(--color-letter-primary);
+  line-height: 1.7;
+  background-image: url(./assets/background/background.jpg);
+}
+section .cards {
+  background-color: var(--color-bg);
+}
+section .cards > h3 , section .cards > p {
+  text-align: center;
+  color:  var(--color-letter-secondary);
 }
 
 /* === ABOUT === */
+.about h1 {
+  color: var(--color-letter-primary)
+}
 .about {
-  position: center;
-  height: 100%;
+  /* position: absolute;
+  left: 0; */
+  flex-direction: column;
   margin: auto;
-  width: max-content;
-  border-radius: 5px;
-  display: block;
+  width: 25%;
   overflow-x: hidden;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+  background-color: var(--color-bg3);
+  color: var(--color-letter-secondary);
+  padding: 3rem;
 }
 .about > img {
-  border-radius: 10px;
+  border-radius: 51rem 51rem 2rem 2rem ;
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
+}
+
+.about > img:hover {
+  border-radius: 0%;
+  transform: var(--transition);
 }
 
 /* === PROJECT === */
 .projects {
   margin: auto;
   text-align: center;
-  padding: 25px;
   overflow-x: hidden;
-  border-radius: 5px;
 }
 
 /* === CARDS === */
@@ -47,13 +149,10 @@ body {
   font-size: 20px;
   vertical-align:top;
   width:max-content;
-  height:100%;
-  border-radius: 5px;
-  list-style-type: none;
   margin: auto;
-  padding: 12px;
+  padding: 1.5rem;
   display: inline-block;
-  overflow: hidden;
+  overflow: auto;
 }
 .cards > img {
   height: 200px;
@@ -66,9 +165,11 @@ body {
   max-width: 400px;
   margin: auto;
   text-align: center;
-  padding: 25px;
+  padding: 3rem;
   overflow-x: hidden;
   border-radius: 5px;
+  background-color: var(--color-bg);
+  margin-bottom: 3rem;
 }
 .contact label {
   text-align: left;
@@ -96,21 +197,30 @@ body {
 
 /* === FOOTER === */
 footer {
-  position: fixed;
-  background-color: #6495ED;
+  background-color: var(--color-pretty-blue);
   text-align: center;
+  position: fixed;
   bottom: 0;
   width: 100%;
-  opacity: 75%;
-  bottom: 0px;
+  opacity: 60%;
 }
 
-/* === OTHER === */
-.center {
-  text-align: center;
-  display: block;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  width: 100%;
+
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-wigth-md)
+  }
+  section{
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-wigth-sm)
+  }
+  section > h2{
+    margin-top: 2rem;
+  }
 }
