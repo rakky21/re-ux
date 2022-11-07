@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import { useState } from "react";
-=======
-import { useMutation, useQuery } from "@apollo/client";
-import React, { useState, useEffect } from "react";
-import { ADD_REQUISITO } from "../../utils/mutations";
->>>>>>> 9c4390c9832b39d4d0a5e874acb78378cea74479
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -13,7 +7,6 @@ export default function Contact() {
   const [comentario, setComentario] = useState("");
   const [isPending, setIsPending] = useState(false);
 
-<<<<<<< HEAD
   function getPersonas(e) {
     e.preventDefault();
     setIsPending(true);
@@ -37,28 +30,6 @@ export default function Contact() {
         setIsPending(false);
       });
   }
-=======
-  const { addRequisito } = useQuery(ADD_REQUISITO);
-
-  const Requisito = () => {
-    addRequisito({
-      variables: {
-        name: name,
-        apellido: apellido,
-        correo: correo,
-        comentario: comentario,
-      },
-    });
-    if (error) {
-      console.log(error);
-    }
-  };
-  useEffect(() => {
-    if (data) {
-      setUser(data.getAllUsers);
-    }
-  }, []);
->>>>>>> 9c4390c9832b39d4d0a5e874acb78378cea74479
 
   return (
     <div className="contact">
