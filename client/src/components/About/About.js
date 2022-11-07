@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 function About() {
   return (
-    <section className="container">
+    <section>
       <div className="about">
         <img
           src={Cara}
@@ -15,12 +15,11 @@ function About() {
         <div className="card-body">
           <h1 className="card-title border-bottom"> Freddy </h1>
           <p className="card-text my-2">
-            I'm Freddy and this is my Portfolio I am a Full-Stack Developer.{" "}
+            I'm a Full-Stack Developer.{" "}
             <br />
             I have work experience in React, Javascript, CSS, HTML, back &
             front-end development. <br />
-            These are the group and personal projects etc.
-          </p>
+            These are some personal and group projects done during and after the bootcamp</p>
           <a
             href="https://github.com/rakky21"
             target="_blank"

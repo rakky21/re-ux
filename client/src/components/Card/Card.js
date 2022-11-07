@@ -1,18 +1,17 @@
 import React from "react";
 
-function Card ({projectCards, titulos}) {
-
+function Card({ projectCards, titulos }) {
   return (
-    <div className="flex">
+    <section>
       <h2>{titulos}</h2>
       {projectCards.map((card) => (
         <div className="cards" key={card.id}>
-          <img src={card.img} alt="Group Project Example"/>
+          <img src={card.img} alt="Group Project Example" />
           <h3>{card.name}</h3>
-          <p>{card.description}</p>
+          <h6>{card.description}</h6>
           <div>
             <a
-              className="btn btn-primary col-4"
+              className="btn"
               href={card.href}
               target="_blank"
               rel="noreferrer noopener"
@@ -23,7 +22,7 @@ function Card ({projectCards, titulos}) {
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 }
 

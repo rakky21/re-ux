@@ -55,24 +55,26 @@ function Projects() {
   ]);
 
   return (
-    <div className="projects">
-      {/* <Card projectCards={cards} key={setCards} titulos="Group Projects" /> */}
-      <Card
-        projectCards={cards.filter((card) => card.group === "Group")}
-        key={setCards.id}
-        titulos="Group Projects"
-      />
-      <Card
-        projectCards={cards.filter((card) => card.group === "Others")}
-        key={setCards.id}
-        titulos="Other Projects"
-      />
-      <Card
-        projectCards={cards.filter((card) => card.group === "Snippits")}
-        key={setCards.id}
-        titulos="Snippits"
-      />
-    </div>
+    <section id="projects">
+      <div>
+        {/* <Card projectCards={cards} key={setCards} titulos="Group Projects" /> */}
+        <Card
+          projectCards={cards.filter((card) => card.group === "Group")}
+          key={setCards.id}
+          titulos="Group Projects"
+        />
+        <Card
+          projectCards={cards.filter((card) => card.group === "Others")}
+          key={setCards.id}
+          titulos="Other Projects"
+        />
+        <Card
+          projectCards={cards.filter((card) => card.group === "Snippits")}
+          key={setCards.id}
+          titulos="Snippits"
+        />
+      </div>
+    </section>
   );
 }
 
