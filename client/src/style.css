@@ -97,6 +97,7 @@ img{
 }
 .nav > h3:hover {
   color: var(--color-letter-third);
+  transition: var(--transition);
 }
 
 /* === BODY === */
@@ -118,11 +119,12 @@ section .cards > h3 , section .cards > p {
 
 /* === ABOUT === */
 .about h1 {
-  color: var(--color-letter-primary)
+  color: var(--color-letter-primary);
 }
 .about {
   /* position: absolute;
   left: 0; */
+  border-radius: 5px;
   flex-direction: column;
   margin: auto;
   width: 25%;
@@ -140,6 +142,7 @@ section .cards > h3 , section .cards > p {
 .about > img:hover {
   border-radius: 0%;
   transition: var(--transition2);
+  transform:rotate(-5deg);
 }
 
 /* === PROJECT === */
@@ -158,6 +161,8 @@ section .cards > h3 , section .cards > p {
   padding: 1.5rem;
   display: inline-block;
   overflow: auto;
+  border-radius: 5px;
+
 }
 .cards > img {
   height: 200px;
