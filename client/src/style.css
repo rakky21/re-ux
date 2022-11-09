@@ -3,7 +3,8 @@
 /* === GEN === */
 
 :root {
-  --transition: all 500ms ease;
+  --transition: all 1s ease;
+  --transition2: all 5s ease;
 
   --color-bg: rgba(245,245,245);
   --color-bg2: rgba(255,250,250);
@@ -91,8 +92,11 @@ img{
   background-color: #6495ED;
   cursor: pointer;
   padding: 0.60rem .75rem;
-  gap: 0.75rem;
+  gap: 2rem;
   font-size: 200%;
+}
+.nav > h3:hover {
+  color: var(--color-letter-third);
 }
 
 /* === BODY === */
@@ -128,13 +132,14 @@ section .cards > h3 , section .cards > p {
   padding: 3rem;
 }
 .about > img {
-  border-radius: 51rem 51rem 2rem 2rem ;
+  border-radius: 65rem 65rem 35rem 35rem ;
   padding: 3rem 1.5rem 1.5rem 1.5rem;
+  transition: var(--transition2);
 }
 
 .about > img:hover {
   border-radius: 0%;
-  transform: var(--transition);
+  transition: var(--transition2);
 }
 
 /* === PROJECT === */
@@ -162,7 +167,7 @@ section .cards > h3 , section .cards > p {
 
 /* === CONTACT === */
 .contact {
-  max-width: 400px;
+  max-width: 500px;
   margin: auto;
   text-align: center;
   padding: 3rem;
@@ -204,7 +209,6 @@ footer {
   width: 100%;
   opacity: 60%;
 }
-
 
 
 @media screen and (max-width: 1024px) {
