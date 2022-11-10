@@ -14,9 +14,8 @@ function Contact() {
     setIsPending(true);
   };
   return (
-    <section id="contact">
-      <h2> Contact </h2>
-      <div className="contact">
+    <section id="contact" className="contact">
+      <h2 className=" border-bottom"> Contact </h2>
         <form className="form" onSubmit={handleRequisito}>
           <label> First Name:</label>
           <input
@@ -26,7 +25,6 @@ function Contact() {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-
           <label> Last Name: </label>
           <input
             required
@@ -64,7 +62,6 @@ function Contact() {
             )}
           </div>
         </form>
-      </div>
     </section>
   );
 }
