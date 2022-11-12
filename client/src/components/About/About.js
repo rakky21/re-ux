@@ -6,13 +6,13 @@ function About() {
   return (
     <section>
       <div className="about">
+        <div className="card-body">
         <img
           src={Cara}
           className="card-img my-2"
           alt="Una Foto Aqui"
           style={{ height: "300px", width: "auto" }}
         />
-        <div className="card-body">
           <h1 className="card-title border-bottom"> Freddy </h1>
           <p className="card-text my-2">
             I'm a Full-Stack Developer.{" "}

@@ -56,7 +56,7 @@ function Projects() {
       id: 6,
       img: tempora,
       name: "BudgetTracker",
-      description: "TBD",
+      description: "TBD  ",
       href: "https://rakky21.github.io/tempora/",
       group: "Snippits",
     },
@@ -71,7 +71,7 @@ function Projects() {
   ]);
 
   return (
-    <section id="projects" className="projects">
+    <section id="projects" className="projects row">
       
       {/* <Card projectCards={cards} key={setCards} titulos="Group Projects" /> */}
       <Card

@@ -17,6 +17,13 @@ import Articulo from "../Articulo/Articulo";
 function Experience() {
   const [articulos, setArticulos] = useState([
     {
+      id: 15,
+      name: "Bootstrap",
+      Icon: [],
+      experiencia: "Experienced",
+      group: "frente",
+    },
+    {
       id: 14,
       name: "HTML",
       Icon: [DiCss3],
