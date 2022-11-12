@@ -68,7 +68,7 @@ a :hover{
 .btn:hover{
   transition: var(--transition);
   background-color: var(--color-bg4);
-  color: var(--color-letter-third);
+  color: var(--color-letter-third   );
 }
 * {
   margin: 0;
@@ -151,6 +151,8 @@ body {
 .experience > .article {
   opacity:var(--color-bg);
   padding: 1.5rem;
+  border: solid;
+  border-color: var(--color-bg);
   border-radius: 15px; 
   gap: 5rem;
   background-color: var(--color-bg);
@@ -159,6 +161,7 @@ body {
 .experience > .article:hover {
   transition: var(--transition);
   color: var(--color-letter-third);
+  border-color: var(--color-letter-third);
 }
 
 /* === PROJECT === */
