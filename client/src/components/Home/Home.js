@@ -31,7 +31,9 @@ function Home() {
       <div>
         <About />
       </div>
-      <Homes />
+      <div>
+        <Homes />
+      </div>
       <footer>
         <Footer />
       </footer>

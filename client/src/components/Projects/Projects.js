@@ -1,6 +1,9 @@
 import React from "react";
 import Card from "../Card/Card.js";
 
+import { Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 const {
   toolkit,
   tunebook,
@@ -12,6 +15,14 @@ import { useState } from "react";
 
 function Projects() {
   const [cards, setCards] = useState([
+    {
+      id: 8,
+      img: "Toolkit",
+      name: "TBD",
+      description: "This is another future project",
+      href: "https://lrivales.github.io/app-toolkit/",
+      group: "Group",
+    },
     {
       id: 1,
       img: toolkit,
@@ -71,8 +82,7 @@ function Projects() {
   ]);
 
   return (
-    <section id="projects" className="projects row">
-      
+    <div id="projects" className="projects row">
       {/* <Card projectCards={cards} key={setCards} titulos="Group Projects" /> */}
       <Card
         projectCards={cards.filter((card) => card.group === "Group")}
@@ -89,7 +99,7 @@ function Projects() {
         key={setCards.id}
         titulos="Snippits"
       />
-    </section>
+    </div>
   );
 }
 

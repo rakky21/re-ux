@@ -23,6 +23,7 @@ function Contact() {
             placeholder="John"
             type="text"
             value={name}
+            name= "name"
             onChange={(e) => setName(e.target.value)}
           />
           <label> Last Name: </label>
@@ -39,6 +40,7 @@ function Contact() {
             placeholder="email@email.com"
             type="text"
             value={correo}
+            name="correo"
             onChange={(e) => setCorreo(e.target.value)}
           />
           <label> Comment</label>
@@ -46,6 +48,7 @@ function Contact() {
             placeholder="Comment"
             typeof="text"
             value={comentario}
+            name="comentario"
             onChange={(e) => setComentario(e.target.value)}
           />
           <div>

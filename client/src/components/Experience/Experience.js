@@ -26,7 +26,7 @@ function Experience() {
     {
       id: 14,
       name: "HTML",
-      avatar: DiCss3,
+      avatar: [AiFillHtml5],
       experiencia: "Experienced",
       group: "frente",
     },
