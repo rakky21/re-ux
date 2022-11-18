@@ -16,7 +16,7 @@ function Contact() {
   return (
     <section id="contact" className="contact">
       <h2 className=" border-bottom"> Contact </h2>
-        <form className="form" onSubmit={handleRequisito}>
+        <form className="container" onSubmit={handleRequisito}>
           <label> First Name:</label>
           <input
             required
@@ -24,14 +24,6 @@ function Contact() {
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-          />
-          <label> Last Name: </label>
-          <input
-            required
-            placeholder="Smith"
-            type="text"
-            value={apellido}
-            onChange={(e) => setApellido(e.target.value)}
           />
           <label> Email </label>
           <input
@@ -67,3 +59,5 @@ function Contact() {
 }
 
 export default Contact;
+
+

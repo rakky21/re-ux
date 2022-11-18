@@ -7,7 +7,7 @@
   --transition2: all 5s ease;
   --transition3: all 2ms ease;
 
-  --color-bg: rgb(16, 16, 59);
+  --color-bg: rgb(211,211,211);
   --color-bg2: rgb(30, 16, 71);
   --color-bg3: rgb(17, 17, 82);
   --color-bg4: rgb(35, 25, 94);
@@ -39,9 +39,9 @@ section {
   margin-top:  4rem;
   margin-bottom: 5rem;
   opacity: 90%;
+  text-align: center;
 }
 section > h2, section > h3 {
-  text-align: center;
   color: var(--color-letter-primary);
   margin-bottom: 1.5rem;
 }
@@ -85,6 +85,11 @@ html{
 ::-webkit-scrollbar{
   display: none;
 }
+.container {
+  padding : 0 1em;
+  max-width: 60rem;
+  margin: 0 auto;
+}
 /* === NAV === */
 .nav {
   display: flex;
@@ -104,10 +109,9 @@ html{
 /* === BODY === */
 body {
   font-family: 'Poppins', sans-serif;
-  text-align: center;
   background: var(--color-bg);
   color: var(--color-letter-primary);
-  line-height: 1.7;
+  /* line-height: 1.7; */
   background-image: url(./assets/background/background.jpg);
 }
 
@@ -142,57 +146,70 @@ body {
 /* === EXPERIENCE === */
 .experience {
   margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   width:min-content;
   gap: 5rem;
   transition: var(--transition);
+  display: flex;
 }
-.experience > .article {
+.experience > section .article {
   opacity:var(--color-bg);
   padding: 1.5rem;
   border: solid;
   border-color: var(--color-bg);
   border-radius: 15px; 
   gap: 5rem;
-  background-color: var(--color-bg);
   transition: var(--transition);
+  border: 1px solid transparent;
 }
-.experience > .article:hover {
+.experience > h2 {
+  text-align: center;
+}
+.experience > section .article:hover {
   transition: var(--transition);
-  color: var(--color-letter-third);
-  border-color: var(--color-letter-third);
+  color: var(--color-magentaDark);
+  border-color: var(--color-letter-primary);
+  background-color: var(--color-bg);
 }
 
 /* === PROJECT === */
 .projects{
-  margin: auto;
-  text-align: center;
+  margin: 0;
   border-radius: 15px;
   overflow: hidden;
   width: fit-content;
 }
-.projects > section .card-body {
+section .card-body {
   display: inline-block;
 }
 .card {
-  background-color: var(--color-bg);
+  margin: auto;
   border: 1px solid transparent;
   border-radius: 5px;
   padding: .1rem;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  gap: .15rem;
+  transition: var(--transition);
+  background-color: transparent;
+}
+section > .container_card > h2{
+  width: min-content;
+  margin: auto;
+  display: inline-block;
 }
 .card:hover{
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transition: var(--transition); 
+  color: var(--color-magentaDark);
+  border-color: var(--color-letter-primary);
+  background-color: var(--color-bg);
 }
 .card > img {
   border-radius: 5px;
   height: 150px;
 }
-.card > h6 {
-  height: 70px;
+section > .container_card > h2 {
+  width: min-content;
+  text-align: center;
+}
+.card > small {
+  height: 80px;
 }
 
 /* === CONTACT === */
@@ -203,8 +220,17 @@ body {
   padding: 3rem;
   overflow-x: hidden;
   border-radius: 15px;
-  background-color: var(--color-bg);
+  transition: var(--transition);
   margin-bottom: 3rem;
+  border: solid;
+  border-color: var(--color-letter-third);
+  border: 1px solid transparent;
+}
+.contact:hover{
+  transition: var(--transition);
+  color: var(--color-magentaDark);
+  border-color: var(--color-letter-primary);
+  background-color: var(--color-bg);
 }
 .contact label {
   text-align: left;
@@ -220,15 +246,15 @@ body {
   text-align: center;
   color: #36a936;
 }
-.contact > input, .about > textarea {
+/* .contact > input, .contact > textarea {
   text-align: left;
   width: 100px;
   padding: 6px;
   margin: 10px 0;
   border: 1px solid;
-  box-sizing: border-box;
+  box-sizing: none;
   display: block;
-}
+} */
 
 /* === FOOTER === */
 footer {

@@ -26,7 +26,7 @@ function Experience() {
     {
       id: 14,
       name: "HTML",
-      avatar: DiCss3,
+      avatar: [AiFillHtml5],
       experiencia: "Experienced",
       group: "frente",
     },
@@ -125,20 +125,22 @@ function Experience() {
 
   return (
     <section id="experience" className="experience">
-      <Articulo
-        expArticulo={articulos.filter(
-          (articulo) => articulo.group === "frente"
-        )}
-        key={setArticulos.id}
-        nomArticulo="Front-End Development"
-      />
-      <Articulo
-        expArticulo={articulos.filter(
-          (articulo) => articulo.group === "detras"
-        )}
-        key={setArticulos.id}
-        nomArticulo="Back-End Development"
-      />
+      <div>
+      </div>
+        <Articulo
+          expArticulo={articulos.filter(
+            (articulo) => articulo.group === "frente"
+          )}
+          key={setArticulos.id}
+          nomArticulo="Front-End Development Experience"
+        />
+        <Articulo
+          expArticulo={articulos.filter(
+            (articulo) => articulo.group === "detras"
+          )}
+          key={setArticulos.id}
+          nomArticulo="Back-End Development Experience"
+        />
     </section>
   );
 }
