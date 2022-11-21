@@ -12,7 +12,7 @@ function Home() {
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
   const Homes = () => {
     if (currentCategory === "Home") {
-      return "/";
+      return "";
     } else if (currentCategory === "projects") {
       return <Projects currentCategory={currentCategory} />;
     } else if (currentCategory === "experience") {

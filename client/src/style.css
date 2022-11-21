@@ -25,10 +25,6 @@
   --container-wigth-md: 86%;
   --container-wigth-sm: 90%;
 }
-/* .container {
-  width: var(--container-width-lg);
-  margin: 0 auto;
-} */
 h1,h2,h3,h4,h5 {
   font-weight: 500;
 }
@@ -88,8 +84,9 @@ html{
 .container {
   padding : 0 1em;
   max-width: 60rem;
-  margin: 0 auto;
+  margin: 3rem  auto;
 }
+
 /* === NAV === */
 .nav {
   display: flex;
@@ -177,9 +174,11 @@ body {
   border-radius: 15px;
   overflow: hidden;
   width: fit-content;
+  display: flex;
 }
-section .card-body {
+section > .container_card {
   display: inline-block;
+
 }
 .card {
   margin: auto;
@@ -188,6 +187,7 @@ section .card-body {
   padding: .1rem;
   transition: var(--transition);
   background-color: transparent;
+  /* display: inline-block; */
 }
 section > .container_card > h2{
   width: min-content;
@@ -236,6 +236,10 @@ section > .container_card > h2 {
   text-align: left;
   display: block;
 }
+.contact input {
+  border: .1rem solid;
+  width: 75%;
+}
 .contact > h2 {
   font-size: 35px;
   margin-bottom: 30px;
@@ -246,15 +250,12 @@ section > .container_card > h2 {
   text-align: center;
   color: #36a936;
 }
-/* .contact > input, .contact > textarea {
+.contact > div> form textarea {
   text-align: left;
-  width: 100px;
-  padding: 6px;
-  margin: 10px 0;
-  border: 1px solid;
-  box-sizing: none;
-  display: block;
-} */
+  width: 75%;
+  border: .1rem solid;
+  resize: none;
+}
 
 /* === FOOTER === */
 footer {

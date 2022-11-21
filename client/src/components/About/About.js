@@ -4,9 +4,8 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 function About() {
   return (
-    <section>
-      <div className="about">
-        <div className="card-body">
+    <section className="about">
+      <div className="card-body">
         <img
           src={Cara}
           className="card-img my-2"
@@ -37,7 +36,6 @@ function About() {
             <FaLinkedinIn size="2em" title="LinkedIn" />
             <br />
           </a>
-        </div>
       </div>
     </section>
   );

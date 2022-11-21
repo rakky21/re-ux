@@ -1,63 +1,67 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useState } from "react";
-import { AiOutlineMail, AiOutlineLoading3Quarters } from "react-icons/ai";
+import { AiOutlineMail } from "react-icons/ai";
+
+import emailjs from "emailjs-com";
 
 function Contact() {
   const [name, setName] = useState("");
-  const [apellido, setApellido] = useState("");
   const [correo, setCorreo] = useState("");
   const [comentario, setComentario] = useState("");
-  const [isPending, setIsPending] = useState(false);
 
-  const handleRequisito = (e) => {
+  //clear form after submit
+  const form = useRef();
+  const sendEmail = (e) => {
     e.preventDefault();
-    setIsPending(true);
+    emailjs
+    .sendForm(
+      "service_i4be4im",
+      "template_9nsiyeb",
+      form.current,
+      "ZzbtA-4C5mnas6mko"
+      )
   };
   return (
     <section id="contact" className="contact">
-      <h2 className=" border-bottom"> Contact </h2>
-        <form className="container" onSubmit={handleRequisito}>
+      <div className="container">
+        <h2 className=" border-bottom"> Contact </h2>
+        <form ref={form} onSubmit={sendEmail}>
           <label> First Name:</label>
           <input
             required
-            placeholder="John"
+            placeholder="Name"
             type="text"
             value={name}
+            name="name"
             onChange={(e) => setName(e.target.value)}
           />
-          <label> Email </label>
+          <label> Email: </label>
           <input
             required
             placeholder="email@email.com"
-            type="text"
+            type="email"
             value={correo}
+            name="correo"
             onChange={(e) => setCorreo(e.target.value)}
           />
           <label> Comment</label>
           <textarea
             placeholder="Comment"
-            typeof="text"
+            type="text"
             value={comentario}
+            name="comentario"
             onChange={(e) => setComentario(e.target.value)}
           />
           <div>
-            {!isPending && (
-              <button className="btn" typeof="submit">
-                {" "}
-                <AiOutlineMail /> Contact Me
-              </button>
-            )}
-            {isPending && (
-              <div disabled className="btn">
-                <AiOutlineLoading3Quarters /> Loading{" "}
-              </div>
-            )}
+            <button className="btn" type="submit">
+              {" "}
+              <AiOutlineMail /> Contact Me
+            </button>
           </div>
         </form>
+      </div>
     </section>
   );
 }
 
 export default Contact;
-
-
