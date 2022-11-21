@@ -19,7 +19,7 @@ export const QUERY_REQUISITO = gql`
   query requisito($requisito: String!) {
     _id
     usuario
-    comnetario
+    comentario
     createdAt
   }
 `;
@@ -28,9 +28,9 @@ export const QUERY_REQUISITOS = gql`
   query requisitos($usuario: String) {
     requisitos(usuario: $usuario) {
       _id
+      usuario
       comentario
       createdAt
-      usuario
     }
   }
 `;

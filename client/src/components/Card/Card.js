@@ -1,29 +1,38 @@
 import React from "react";
 
-function Card ({projectCards, titulos}) {
-
+function Card({ projectCards, titulos }) {
   return (
-    <div className="flex">
-      <h2>{titulos}</h2>
-      {projectCards.map((card) => (
-        <div className="cards" key={card.id}>
-          <img src={card.img} alt="Group Project Example"/>
-          <h3>{card.name}</h3>
-          <p>{card.description}</p>
-          <div>
-            <a
-              className="btn btn-primary col-4"
-              href={card.href}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              {" "}
-              Open{" "}
-            </a>
-          </div>
+    <section className="container">
+      <div className="container_card">
+        <h2 className="border-bottom">{titulos}</h2>
+        <div>
+          {projectCards.map((card) => (
+            <div className="card-body" key={card.id}>
+              <div className="card col" style={{ width: "18rem" }}>
+                <img
+                  src={card.img}
+                  className="card-img"
+                  alt="Group Project Example"
+                />
+                <h3 className="card-title">{card.name}</h3>
+                <small className="card-text">{card.description}</small>
+                <div>
+                  <a
+                    className="btn"
+                    href={card.href}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    {" "}
+                    Open{" "}
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    </section>
   );
 }
 
