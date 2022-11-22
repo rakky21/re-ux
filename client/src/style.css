@@ -15,7 +15,7 @@
   --color-letter-primary: rgb(228, 79, 34);  
   --color-letter-secondary: rgba(255,160,122);
   --color-letter-third: rgba(255,182,193);
-  --color-magentaDark: rgba(139,0,139);
+  --color-letter-onHover: rgba(65, 105, 225);
   --color-pretty-blue: rgba(100,149,237);
   --color-letter-alert: rgba(240,128,128);
   --color-letter-alert2: rgba(178,34,34);
@@ -33,9 +33,10 @@ h1 {
 }
 section { 
   margin-top:  4rem;
-  margin-bottom: 5rem;
+  margin-bottom: 1.5rem;
   opacity: 90%;
   text-align: center;
+  width: auto;
 }
 section > h2, section > h3 {
   color: var(--color-letter-primary);
@@ -60,6 +61,8 @@ a :hover{
   cursor: pointer;
   border: 1px solid;
   transition: var(--transition);
+  
+  margin-bottom: 1.5rem;
 }
 .btn:hover{
   transition: var(--transition);
@@ -146,39 +149,36 @@ body {
   width:min-content;
   gap: 5rem;
   transition: var(--transition);
-  display: flex;
+  display: flex;  
 }
-.experience > section .article {
+.experience > div .article {
   opacity:var(--color-bg);
   padding: 1.5rem;
   border: solid;
   border-color: var(--color-bg);
-  border-radius: 15px; 
+  border-radius: 5px; 
   gap: 5rem;
   transition: var(--transition);
   border: 1px solid transparent;
 }
-.experience > h2 {
+.article > h3 {
   text-align: center;
+  margin-bottom: 1.5rem;
 }
-.experience > section .article:hover {
+.experience > div .article:hover {
   transition: var(--transition);
-  color: var(--color-magentaDark);
+  color: var(--color-letter-onHover);
   border-color: var(--color-letter-primary);
   background-color: var(--color-bg);
 }
 
 /* === PROJECT === */
 .projects{
-  margin: 0;
+  margin: auto;
   border-radius: 15px;
   overflow: hidden;
   width: fit-content;
-  display: flex;
-}
-section > .container_card {
-  display: inline-block;
-
+  display: grid;
 }
 .card {
   margin: auto;
@@ -187,16 +187,14 @@ section > .container_card {
   padding: .1rem;
   transition: var(--transition);
   background-color: transparent;
-  /* display: inline-block; */
+  display: flex;
 }
-section > .container_card > h2{
-  width: min-content;
-  margin: auto;
+.titles {
   display: inline-block;
 }
 .card:hover{
   transition: var(--transition); 
-  color: var(--color-magentaDark);
+  color: var(--color-letter-onHover);
   border-color: var(--color-letter-primary);
   background-color: var(--color-bg);
 }
@@ -204,45 +202,49 @@ section > .container_card > h2{
   border-radius: 5px;
   height: 150px;
 }
-section > .container_card > h2 {
-  width: min-content;
-  text-align: center;
-}
 .card > small {
   height: 80px;
 }
 
 /* === CONTACT === */
-.contact {
-  max-width: 500px;
+section .contact {
+  max-width: 60rem;
   margin: auto;
+  display: flex;
+  width: 500px;
   text-align: center;
-  padding: 3rem;
   overflow-x: hidden;
-  border-radius: 15px;
   transition: var(--transition);
-  margin-bottom: 3rem;
-  border: solid;
+}
+.contact > .container {
+  max-width: 500px;
+  border-radius: 5px;
+  transition:  var(--transition);
   border-color: var(--color-letter-third);
   border: 1px solid transparent;
 }
-.contact:hover{
+.contact > .container:hover{
   transition: var(--transition);
-  color: var(--color-magentaDark);
+  color: var(--color-letter-onHover);
   border-color: var(--color-letter-primary);
   background-color: var(--color-bg);
 }
 .contact label {
   text-align: left;
   display: block;
+  margin-bottom: 0.5rem;
 }
 .contact input {
   border: .1rem solid;
   width: 75%;
+  margin-bottom: 0.5rem;
 }
-.contact > h2 {
+.contact > div > h2 {
   font-size: 35px;
-  margin-bottom: 30px;
+  width: fit-content;
+  margin: auto;
+  align-content: center;
+  margin-bottom: 1.5rem;
 }
 
 .message {
@@ -255,6 +257,7 @@ section > .container_card > h2 {
   width: 75%;
   border: .1rem solid;
   resize: none;
+  margin-bottom: 0.5rem;
 }
 
 /* === FOOTER === */

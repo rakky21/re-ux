@@ -2,7 +2,7 @@ import React from "react";
 
 function Articulo({ expArticulo, nomArticulo }) {
   return (
-    <section className="container">
+    <div className="container">
       <div className="article">
         <h3 className="border-bottom"> {nomArticulo} </h3>
         {expArticulo.map((articulo) => (
@@ -13,7 +13,7 @@ function Articulo({ expArticulo, nomArticulo }) {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
 

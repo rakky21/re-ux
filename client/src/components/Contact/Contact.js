@@ -24,7 +24,7 @@ function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="container">
-        <h2 className=" border-bottom"> Contact </h2>
+        <h2 className="border-bottom"> Contact </h2>
         <form ref={form} onSubmit={sendEmail}>
           <label> First Name:</label>
           <input

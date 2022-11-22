@@ -13,6 +13,22 @@ import { useState } from "react";
 function Projects() {
   const [cards, setCards] = useState([
     {
+      id: 9,
+      img: toolkit,
+      name: "Foxtail",
+      description: "Personal project",
+      href: "https://lrivales.github.io/app-toolkit/",
+      group: "Others",
+    },
+    {
+      id: 8,
+      img: toolkit,
+      name: "Foxtail",
+      description: "Personal project",
+      href: "https://lrivales.github.io/app-toolkit/",
+      group: "Others",
+    },
+    {
       id: 1,
       img: toolkit,
       name: "Toolkit",
@@ -71,7 +87,7 @@ function Projects() {
   ]);
 
   return (
-    <section id="projects" className="projects row">
+    <section id="projects" className="projects">
       
       {/* <Card projectCards={cards} key={setCards} titulos="Group Projects" /> */}
       <Card

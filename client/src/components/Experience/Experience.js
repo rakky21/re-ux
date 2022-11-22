@@ -125,8 +125,6 @@ function Experience() {
 
   return (
     <section id="experience" className="experience">
-      <div>
-      </div>
         <Articulo
           expArticulo={articulos.filter(
             (articulo) => articulo.group === "frente"
