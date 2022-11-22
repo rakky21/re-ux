@@ -1,8 +1,9 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
-const sequelize = require("../config/connection");
 
-const UserSchema = new Schema(
+const requisitoSchema = require("./Requisito");
+
+const userShema = new Schema(
   {
     usuario: {
       type: String,
@@ -31,7 +32,7 @@ const UserSchema = new Schema(
   { toJSON: { virtuals: true } }
 );
 
-UserSchema.pre("save", async function (next) {
+userShema.pre("save", async function (next) {
   if ((this, isNew || this.isModified("password"))) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
@@ -40,10 +41,10 @@ UserSchema.pre("save", async function (next) {
   next();
 });
 
-UserSchema.methods.isCorrectPassword = async function(password) {
+userShema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
-const User = model("User", UserSchema);
+const User = model("User", userShema);
 
 module.exports = User;

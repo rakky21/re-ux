@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+// const { Comentario } = require("");
 const dateFormat = require("../utils/dateFormat");
 
 const requisitoSchema = new Schema(
@@ -12,11 +13,9 @@ const requisitoSchema = new Schema(
       default: Date.now,
       get: (timestamp) => dateFormat(timestamp),
     },
-    commentario: {
+    comentario: {
       type: String,
-      require: "You need to leave a message",
-      minlength: 1,
-      maxlength: 300,
+      require: true,
     },
   },
   {
@@ -24,9 +23,9 @@ const requisitoSchema = new Schema(
       virtuals: true,
       getters: true,
     },
-    id: false
+    id: false,
   }
 );
-const PostComentario = model("Requisito", requisitoSchema);
+const Requisito = model("Requisito", requisitoSchema);
 
-module.exports = PostComentario;
+module.exports = Requisito;

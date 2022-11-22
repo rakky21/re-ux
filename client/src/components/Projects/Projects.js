@@ -13,6 +13,22 @@ import { useState } from "react";
 function Projects() {
   const [cards, setCards] = useState([
     {
+      id: 9,
+      img: toolkit,
+      name: "Foxtail",
+      description: "Personal project",
+      href: "https://lrivales.github.io/app-toolkit/",
+      group: "Others",
+    },
+    {
+      id: 8,
+      img: toolkit,
+      name: "Foxtail",
+      description: "Personal project",
+      href: "https://lrivales.github.io/app-toolkit/",
+      group: "Others",
+    },
+    {
       id: 1,
       img: toolkit,
       name: "Toolkit",
@@ -52,10 +68,27 @@ function Projects() {
       href: "https://rakky21.github.io/tempora/",
       group: "Snippits",
     },
+    {
+      id: 6,
+      img: tempora,
+      name: "BudgetTracker",
+      description: "TBD  ",
+      href: "https://rakky21.github.io/tempora/",
+      group: "Snippits",
+    },
+    {
+      id: 7,
+      img: tempora,
+      name: "Run Buddy",
+      description: "Work done during the bootcamp",
+      href: "https://rakky21.github.io/tempora/",
+      group: "Others",
+    },
   ]);
 
   return (
-    <div className="projects">
+    <section id="projects" className="projects">
+      
       {/* <Card projectCards={cards} key={setCards} titulos="Group Projects" /> */}
       <Card
         projectCards={cards.filter((card) => card.group === "Group")}
@@ -72,7 +105,7 @@ function Projects() {
         key={setCards.id}
         titulos="Snippits"
       />
-    </div>
+    </section>
   );
 }
 

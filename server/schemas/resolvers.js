@@ -58,6 +58,7 @@ const resolvers = {
         const requisito = await Requisito.create({
           ...args,
           usuario: context.user.usuario,
+          //
         });
         await User.findByIdAndUpdate(
           { _id: context.user._id },

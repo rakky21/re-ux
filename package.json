@@ -25,5 +25,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-graphql": "^0.12.0",
+    "gh-pages": "^4.0.0",
+    "graphql": "^16.6.0",
+    "react-icons": "^4.6.0"
   }
 }
