@@ -5,24 +5,29 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
+  HttpLink,
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import { onError } from "@apollo/client/link/error";
+import Home from "./components/Home/Home";
 
-import Nav from "./components/Nav/Nav";
-import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
-
-const httpLink = createHttpLink({
-  uri: "https://localhost:3001/graphql",
+const errorLink = onError(({ graphqlErrors, networkError }) => {
+  if (graphqlErrors) {
+    graphqlErrors.map(({ message, location, path }) => {
+      alert(`Graphql error ${message}`);
+    });
+  }
 });
+const httpLink = createHttpLink([
+  errorLink,
+  new HttpLink({
+    uri: "https://localhost:3001/graphql",
+  }),
+]);
 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem("id_token");
-
   return {
     headers: {
       ...headers,
@@ -35,37 +40,11 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
-
 function App() {
-  const categories = ["about Me", "projects", "contact"];
-  const [currentCategory, setCurrentCategory] = useState(categories[0]);
-
-  const showPage = () => {
-    if (currentCategory === "about Me") {
-      return <About currentCategory={currentCategory} />;
-    } else if (currentCategory === "projects") {
-      return <Projects currentCategory={currentCategory} />;
-    } else if (currentCategory === "contact") {
-      return <Contact currentCategory={currentCategory} />;
-    }
-  };
-
   return (
-    // <ApolloClient client={client}>
-    <div>
-      <Nav
-        categories={categories}
-        currentCategory={currentCategory}
-        setCurrentCategory={setCurrentCategory}
-      />
-
-      <main>{showPage()}</main>
-      <footer>
-        <Footer />
-      </footer>
-    </div>
-    // </ApolloClient>
+    <ApolloProvider client={client}>
+      <Home />
+    </ApolloProvider>
   );
 }
-
 export default App;

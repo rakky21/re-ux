@@ -52,10 +52,27 @@ function Projects() {
       href: "https://rakky21.github.io/tempora/",
       group: "Snippits",
     },
+    {
+      id: 6,
+      img: tempora,
+      name: "BudgetTracker",
+      description: "TBD  ",
+      href: "https://rakky21.github.io/tempora/",
+      group: "Snippits",
+    },
+    {
+      id: 7,
+      img: tempora,
+      name: "Run Buddy",
+      description: "Work done during the bootcamp",
+      href: "https://rakky21.github.io/tempora/",
+      group: "Others",
+    },
   ]);
 
   return (
-    <div className="projects">
+    <section id="projects" className="projects row">
+      
       {/* <Card projectCards={cards} key={setCards} titulos="Group Projects" /> */}
       <Card
         projectCards={cards.filter((card) => card.group === "Group")}
@@ -72,7 +89,7 @@ function Projects() {
         key={setCards.id}
         titulos="Snippits"
       />
-    </div>
+    </section>
   );
 }
 

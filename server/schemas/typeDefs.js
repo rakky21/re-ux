@@ -6,7 +6,7 @@ const typeDefs = gql`
     usuario: String
     apellido: String
     correo: String
-    requisitos: String
+    requisitos: [Requisito]
   }
 
   type Requisito {
@@ -25,7 +25,7 @@ const typeDefs = gql`
     me: User
     user(usuario: String!): User
     users: [User]
-    requisito(_id: ID!): Requisito
+    requisito: [Requisito]
     requisitos(usuario: String): Requisito
     comentario(text: String!): String!
   }
