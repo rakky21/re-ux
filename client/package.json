@@ -1,5 +1,4 @@
 {
-  "proxy": "http://localhost:3000",
   "homepage": "https://rakky21.github.io/re-ux/",
   "name": "client",
   "version": "1.0.0",
