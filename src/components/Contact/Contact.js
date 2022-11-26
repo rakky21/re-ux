@@ -21,14 +21,14 @@ function Contact() {
     );
   };
   return (
-    <section id="contact" className="contact">
-      <div className="container">
-        <h2 className=" border-bottom"> Contact </h2>
-        <form ref={form} onSubmit={sendEmail}>
+    <section id="contact" className="contact_section">
+      <div className="contact_container">
+        <h2 className="border-bottom"> CONTACT </h2>
+        <form ref={form} onSubmit={sendEmail} className="contact_form">
           <label> First Name:</label>
           <input
             required
-            placeholder="Name"
+            placeholder=" Name"
             type="text"
             value={name}
             name="name"
@@ -37,15 +37,15 @@ function Contact() {
           <label> Email: </label>
           <input
             required
-            placeholder="email@email.com"
+            placeholder=" Example@email.com"
             type="email"
             value={correo}
             name="correo"
             onChange={(e) => setCorreo(e.target.value)}
           />
-          <label> Comment</label>
+          <label> Message</label>
           <textarea
-            placeholder="Comment"
+            placeholder=" Message"
             type="text"
             value={comentario}
             name="comentario"

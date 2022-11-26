@@ -2,9 +2,11 @@ import React from "react";
 import Cara from "../../assets/cover/cara.jpg";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
+
+//FIX THE FACE!!!
 function About() {
   return (
-    <section className="about">
+    <section className="about_section">
       <div className="card-body">
         <img
           src={Cara}

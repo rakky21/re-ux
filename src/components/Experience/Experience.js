@@ -13,8 +13,7 @@ import {
 } from "react-icons/si";
 import { FaReact, FaNodeJs, FaPhp } from "react-icons/fa";
 import Articulo from "../Articulo/Articulo";
-//CONSOLIDATE
-function Experience() {
+export default function Experience() {
   const [articulos, setArticulos] = useState([
     {
       id: 15,
@@ -125,61 +124,20 @@ function Experience() {
 
   return (
     <section id="experience" className="experience">
-      <div>
-      </div>
         <Articulo
           expArticulo={articulos.filter(
             (articulo) => articulo.group === "frente"
           )}
           key={setArticulos.id}
-          nomArticulo="Front-End Development Experience"
+          nomArticulo="FRONT-END DEVELOPMENT EXPERIENCE"
         />
         <Articulo
           expArticulo={articulos.filter(
             (articulo) => articulo.group === "detras"
           )}
           key={setArticulos.id}
-          nomArticulo="Back-End Development Experience"
+          nomArticulo="BACK-END DEVELOPMENT EXPERIENCE"
         />
     </section>
   );
 }
-
-export default Experience;
-
-// ==============================={
-/* <section id="experience" className="experience"> */
-
-//   <h2> My experience</h2>
-
-//   <div className="articles">
-//     <div className="frontEndExp">
-//       <h3> Front-end Development </h3> {/* <div className="articles"> */}
-//       <article className="detallesdeExperiencia">
-//         <h5> HTML</h5>
-//         <AiFillHtml5 />
-//         <small className="text-light"> Experienced </small>
-//       </article>
-//     </div>
-//   </div>
-
-//   {/* === BACKENDD === */}
-//   <div className="backEndExp">
-//     <h3> Back-end Development </h3>
-//     {/* <div className="articles"> */}
-
-//     <article className="detallesdeExperiencia">
-//       <h5> Node.js </h5>
-//       <FaNodeJs />
-//       <small className="text-light"> Experienced </small>
-//     </article>
-//   </div>
-//   {/* </div> */}
-//   {/* </div> */}
-// </section>
-//  );
-//};
-
-//export default Experience;
-
-//  TYPESCRIPT JAVA JAVASCRIPT CANVAS REACT SQL

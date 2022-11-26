@@ -8,16 +8,16 @@ import Experience from "../Experience/Experience";
 import { useState } from "react";
 
 function Home() {
-  const categories = ["Home", "experience", "projects", "contact"];
+  const categories = ["EXPERIENCE", "PROJECTS", "CONTACT"];
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
   const Homes = () => {
     if (currentCategory === "Home") {
       return "";
-    } else if (currentCategory === "projects") {
+    } else if (currentCategory === "PROJECTS") {
       return <Projects currentCategory={currentCategory} />;
-    } else if (currentCategory === "experience") {
+    } else if (currentCategory === "EXPERIENCE") {
       return <Experience currentCategory={currentCategory} />;
-    } else if (currentCategory === "contact") {
+    } else if (currentCategory === "CONTACT") {
       return <Contact currentCategory={currentCategory} />;
     }
   };

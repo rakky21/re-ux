@@ -7,19 +7,25 @@
   --transition2: all 5s ease;
   --transition3: all 2ms ease;
 
-  --color-bg: rgb(211,211,211);
-  --color-bg2: rgb(30, 16, 71);
-  --color-bg3: rgb(17, 17, 82);
-  --color-bg4: rgb(35, 25, 94);
+  --color-bg: #A9A9A9;
+  --color-bg2: #C0C0C0;
+  --color-bg3: #D3D3D3;
+  --color-bg4: #f2f3f4;
 
-  --color-letter-primary: rgb(228, 79, 34);  
+  --color-letter-primary: #000018;  
   --color-letter-secondary: rgba(255,160,122);
   --color-letter-third: rgba(255,182,193);
-  --color-magentaDark: rgba(139,0,139);
-  --color-pretty-blue: rgba(100,149,237);
+  --color-letter-onHover: rgba(65, 105, 225);
+
+  
   --color-letter-alert: rgba(240,128,128);
   --color-letter-alert2: rgba(178,34,34);
   --color-letter-alert:3 rgba(220,20,60);
+  
+  
+  --color--accents : #722F37;
+  --color--accents2 : #6495ED;
+  --color--accents3: rgba(100,149,237);
   
   --container-width-lg: 75%;
   --container-wigth-md: 86%;
@@ -31,12 +37,7 @@ h1,h2,h3,h4,h5 {
 h1 {
   font-size: 2.5rem;
 }
-section { 
-  margin-top:  4rem;
-  margin-bottom: 5rem;
-  opacity: 90%;
-  text-align: center;
-}
+
 section > h2, section > h3 {
   color: var(--color-letter-primary);
   margin-bottom: 1.5rem;
@@ -54,17 +55,19 @@ a :hover{
 .btn {
   width: max-content;
   display: inline-block;
-  background-color: var(--color-pretty-blue);
+  background-color: var(--color--accents);
   padding: 0.65rem 1.5rem;
   border-radius: 0.4rem;
   cursor: pointer;
   border: 1px solid;
   transition: var(--transition);
+  
+  margin-bottom: 1.5rem;
 }
 .btn:hover{
   transition: var(--transition);
-  background-color: var(--color-bg4);
-  color: var(--color-letter-third   );
+  background-color: var(--color--accents2);
+  color: var(--color-letter-third);
 }
 * {
   margin: 0;
@@ -81,16 +84,11 @@ html{
 ::-webkit-scrollbar{
   display: none;
 }
-.container {
-  padding : 0 1em;
-  max-width: 60rem;
-  margin: 3rem  auto;
-}
 
 /* === NAV === */
 .nav {
   display: flex;
-  background-color: #6495ED;
+  background-color: var(--color--accents2);
   cursor: pointer;
   padding: 0.60rem .75rem;
   gap: 2rem;
@@ -103,38 +101,39 @@ html{
   color: var(--color-letter-third);
   transition: var(--transition);
 }
-/* === BODY === */
 body {
   font-family: 'Poppins', sans-serif;
-  background: var(--color-bg);
+  background-color: var(--color-bg3);
   color: var(--color-letter-primary);
-  /* line-height: 1.7; */
-  background-image: url(./assets/background/background.jpg);
+  min-height: 100vh;
+  justify-content: center;
+  font-size: 1.25rem;
+  line-height: 1.6;
 }
 
 /* === ABOUT === */
-.about h1 {
-  color: var(--color-letter-primary);
-}
-.about {
+.about_section {
   position: absolute;
   position: fixed;
   left: 0;
-  /* flex-direction: column; */
-  margin: auto;
-  width: 25%;
+  margin: 1.5rem auto;
+  max-width: 25%;
   overflow-x: hidden;
   background-color: var(--color-bg);
-  color: var(--color-letter-secondary);
-  padding: 3rem;
-  background: linear-gradient(45deg,transparent,var(--color-primary))
+  color: var(--color-letter-primary);
+  background: linear-gradient(45deg,var(--color-primary));
+  text-align: center;
 }
-.about > div> img {
+.about_section h1 {
+  color: var(--color-letter-primary);
+}
+
+.about_section > div> img {
   border-radius: 65rem 65rem 35rem 35rem ;
   padding: 3rem 1.5rem 1.5rem 1.5rem;
   transition: var(--transition2);
 }
-.about > div>  img:hover {
+.about_section> div>  img:hover {
   border-radius: 60%;
   transition: var(--transition2);
   transform:rotate(-5deg);
@@ -142,43 +141,41 @@ body {
 
 /* === EXPERIENCE === */
 .experience {
-  margin: auto;
+  margin: 1.5rem auto;
   width:min-content;
   gap: 5rem;
   transition: var(--transition);
   display: flex;
+  text-align: center;
 }
-.experience > section .article {
-  opacity:var(--color-bg);
+.article {
   padding: 1.5rem;
   border: solid;
   border-color: var(--color-bg);
-  border-radius: 15px; 
+  border-radius: 5px; 
   gap: 5rem;
   transition: var(--transition);
   border: 1px solid transparent;
 }
-.experience > h2 {
+.article > h3 {
   text-align: center;
+  margin-bottom: 1.5rem;
 }
-.experience > section .article:hover {
+.experience > div .article:hover {
   transition: var(--transition);
-  color: var(--color-magentaDark);
-  border-color: var(--color-letter-primary);
-  background-color: var(--color-bg);
+  color: var(--color--accents2);
+  border-color: var(--color--accents2);
+  background-color: var(--color-bg2);
 }
 
 /* === PROJECT === */
 .projects{
-  margin: 0;
+  margin: 1.5rem auto;
   border-radius: 15px;
   overflow: hidden;
   width: fit-content;
-  display: flex;
-}
-section > .container_card {
-  display: inline-block;
-
+  display: grid;
+  text-align: center;
 }
 .card {
   margin: auto;
@@ -187,87 +184,99 @@ section > .container_card {
   padding: .1rem;
   transition: var(--transition);
   background-color: transparent;
-  /* display: inline-block; */
+  display: flex;
 }
-section > .container_card > h2{
-  width: min-content;
-  margin: auto;
+.card_container {
+    padding : 0 1.25em;
+    width: min(90%, 1000px);
+    margin-inline: auto;
+}
+.titles {
   display: inline-block;
 }
 .card:hover{
   transition: var(--transition); 
-  color: var(--color-magentaDark);
-  border-color: var(--color-letter-primary);
+  color: var(--color-letter-onHover);
+  border-color: var(--color-letter-onHover);
   background-color: var(--color-bg);
 }
+
 .card > img {
   border-radius: 5px;
   height: 150px;
-}
-section > .container_card > h2 {
-  width: min-content;
-  text-align: center;
 }
 .card > small {
   height: 80px;
 }
 
 /* === CONTACT === */
-.contact {
-  max-width: 500px;
-  margin: auto;
+/* .contact_section {
+  margin: 1.5rem auto;
   text-align: center;
-  padding: 3rem;
   overflow-x: hidden;
-  border-radius: 15px;
   transition: var(--transition);
-  margin-bottom: 3rem;
-  border: solid;
-  border-color: var(--color-letter-third);
   border: 1px solid transparent;
+  border-radius: 5px;
+  width: auto;
+  display: grid;
+} */
+/* .contact_container {
+  margin: auto;
+  border-radius: 5px;
+  transition:  var(--transition);
+  border-color: var(--color-letter-third);
+  background-color: var();
+} */
+.contact_section{
+  margin: 1.5rem auto;
+  border-radius: 5px;
+  overflow: hidden;
+  width: fit-content;
+  display: grid;
+  text-align: center;
+  border: .1rem solid transparent;
+  max-width: fit-content;
 }
-.contact:hover{
+.contact_form{
+  border: 1px solid transparent;
+  padding: 1.5rem;
   transition: var(--transition);
-  color: var(--color-magentaDark);
-  border-color: var(--color-letter-primary);
+  background-color: transparent;
+  display: grid;
+}
+.contact_section:hover{
+  transition: var(--transition);
+  color: var(--color-letter-onHover);
+  border-color: var(--color--accents2);
   background-color: var(--color-bg);
 }
-.contact label {
+.contact_section label , .contact_form input, textarea {
   text-align: left;
-  display: block;
-}
-.contact input {
-  border: .1rem solid;
-  width: 75%;
-}
-.contact > h2 {
-  font-size: 35px;
-  margin-bottom: 30px;
-}
-
-.message {
-  font-size: 1.2em;
-  text-align: center;
-  color: #36a936;
-}
-.contact > div> form textarea {
-  text-align: left;
-  width: 75%;
-  border: .1rem solid;
+  display: grid;
+  margin-bottom: 0.5rem;
   resize: none;
+}
+.contact_form > textarea{
+  margin-bottom: 1.5rem;
+  padding-bottom: 5rem;
+}
+.contact_container h2 {
+  font-size: 35px;
 }
 
 /* === FOOTER === */
 footer {
-  background-color: var(--color-pretty-blue);
+  background-color: var(--color--accents2);
   text-align: center;
   position: fixed;
   bottom: 0;
   width: 100%;
   opacity: 60%;
+  color: var(--color-letter-primary);
 }
 footer > a:hover{
   color: var(--color-letter-primary);
+  opacity: 100%;
 }
 
 

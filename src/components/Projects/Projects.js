@@ -13,6 +13,22 @@ import { useState } from "react";
 function Projects() {
   const [cards, setCards] = useState([
     {
+      id: 9,
+      img: toolkit,
+      name: "Foxtail",
+      description: "Personal project",
+      href: "https://lrivales.github.io/app-toolkit/",
+      group: "Others",
+    },
+    {
+      id: 8,
+      img: toolkit,
+      name: "Foxtail",
+      description: "Personal project",
+      href: "https://lrivales.github.io/app-toolkit/",
+      group: "Others",
+    },
+    {
       id: 1,
       img: toolkit,
       name: "Toolkit",
@@ -71,23 +87,23 @@ function Projects() {
   ]);
 
   return (
-    <section id="projects" className="projects row">
+    <section id="projects" className="projects">
       
       {/* <Card projectCards={cards} key={setCards} titulos="Group Projects" /> */}
       <Card
         projectCards={cards.filter((card) => card.group === "Group")}
         key={setCards.id}
-        titulos="Group Projects"
+        titulos="GROUP PROJECTS"
       />
       <Card
         projectCards={cards.filter((card) => card.group === "Others")}
         key={setCards.id}
-        titulos="Other Projects"
+        titulos="OTHERS"
       />
       <Card
         projectCards={cards.filter((card) => card.group === "Snippits")}
         key={setCards.id}
-        titulos="Snippits"
+        titulos="SNIPPETS"
       />
     </section>
   );
