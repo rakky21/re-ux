@@ -1,19 +1,18 @@
 {
   "files": {
-    "main.css": "/re-ux/static/css/main.00fa3b85.css",
-    "main.js": "/re-ux/static/js/main.37c2fdb7.js",
-    "static/media/background.jpg": "/re-ux/static/media/background.915a03b25103cb4b6db4.jpg",
-    "static/media/cara.jpg": "/re-ux/static/media/cara.915a03b25103cb4b6db4.jpg",
+    "main.css": "/re-ux/static/css/main.5d3ca040.css",
+    "main.js": "/re-ux/static/js/main.0c7f85b1.js",
+    "static/media/cara.jpg": "/re-ux/static/media/cara.6c00b56b174ef00af891.jpg",
     "static/media/famigos.jpg": "/re-ux/static/media/famigos.888f149867ad72fb1a7a.jpg",
     "static/media/tunebook.jpg": "/re-ux/static/media/tunebook.2b3f1f23e19d21887a91.jpg",
     "static/media/tempora.jpg": "/re-ux/static/media/tempora.3e2eeeefa26619ef650c.jpg",
     "static/media/toolkit.jpg": "/re-ux/static/media/toolkit.869ea45ac3ef4f78a83b.jpg",
     "index.html": "/re-ux/index.html",
-    "main.00fa3b85.css.map": "/re-ux/static/css/main.00fa3b85.css.map",
-    "main.37c2fdb7.js.map": "/re-ux/static/js/main.37c2fdb7.js.map"
+    "main.5d3ca040.css.map": "/re-ux/static/css/main.5d3ca040.css.map",
+    "main.0c7f85b1.js.map": "/re-ux/static/js/main.0c7f85b1.js.map"
   },
   "entrypoints": [
-    "static/css/main.00fa3b85.css",
-    "static/js/main.37c2fdb7.js"
+    "static/css/main.5d3ca040.css",
+    "static/js/main.0c7f85b1.js"
   ]
 }
