@@ -10,7 +10,7 @@ function Nav(props) {
   }, [currentCategory]);
 
   return (
-    <nav className="nav">
+    <nav className="nav nav_container">
       {categories.map((category) => (
         <h3
           className={`${currentCategory === category && "navActive"}`}

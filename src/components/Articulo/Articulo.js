@@ -4,7 +4,7 @@ function Articulo({ expArticulo, nomArticulo }) {
   return (
     <div className="articulo_container">
       <div className="article">
-        <h3 className="border-bottom"> {nomArticulo} </h3>
+        <h3 className="border-bottom articulo_name"> {nomArticulo}</h3>
         {expArticulo.map((articulo) => (
           <div key={articulo.id}>
             <h5> {articulo.name}</h5>

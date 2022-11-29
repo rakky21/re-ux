@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <footer className="footer">
-      <a className="text-muted " href="/">
+      <a className=" " href="/">
         &copy;{new Date().getFullYear()} Cribas Development
       </a>
       <br />

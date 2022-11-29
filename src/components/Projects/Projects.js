@@ -32,7 +32,8 @@ function Projects() {
       id: 1,
       img: toolkit,
       name: "Toolkit",
-      description: "First project",
+      description:
+        "In this projects, as a group, we decided on what would work best as a tool that could assist us on a daily basis.",
       href: "https://lrivales.github.io/app-toolkit/",
       group: "Group",
     },
@@ -72,7 +73,8 @@ function Projects() {
       id: 6,
       img: tempora,
       name: "BudgetTracker",
-      description: "TBD  ",
+      description:
+        "TBD",
       href: "https://rakky21.github.io/tempora/",
       group: "Snippits",
     },
@@ -80,15 +82,15 @@ function Projects() {
       id: 7,
       img: tempora,
       name: "Run Buddy",
-      description: "Work done during the bootcamp",
+      description:
+        "Work done during the bootcamp",
       href: "https://rakky21.github.io/tempora/",
       group: "Others",
     },
   ]);
 
   return (
-    <section id="projects" className="projects">
-      
+    <section id="projects" className="projects_list">
       {/* <Card projectCards={cards} key={setCards} titulos="Group Projects" /> */}
       <Card
         projectCards={cards.filter((card) => card.group === "Group")}

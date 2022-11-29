@@ -8,12 +8,12 @@ import Experience from "../Experience/Experience";
 import { useState } from "react";
 
 function Home() {
-  const categories = ["EXPERIENCE", "PROJECTS", "CONTACT"];
+  const categories = ["HOME","EXPERIENCE", "PROJECTS", "CONTACT"];
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
   const Homes = () => {
-    if (currentCategory === "Home") {
-      return "";
-    } else if (currentCategory === "PROJECTS") {
+    if (currentCategory === "HOME") {
+      return <About currentCategory={currentCategory} />;
+    }else if (currentCategory === "PROJECTS") {
       return <Projects currentCategory={currentCategory} />;
     } else if (currentCategory === "EXPERIENCE") {
       return <Experience currentCategory={currentCategory} />;
@@ -28,7 +28,7 @@ function Home() {
         currentCategory={currentCategory}
         setCurrentCategory={setCurrentCategory}
       />
-      <div>
+      <div className="Home_About">
         <About />
       </div>
       <Homes />

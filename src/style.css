@@ -16,28 +16,47 @@
   --color-letter-secondary: rgba(255,160,122);
   --color-letter-third: rgba(255,182,193);
   --color-letter-onHover: rgba(65, 105, 225);
-
   
-  --color-letter-alert: rgba(240,128,128);
+  --color-letter-testing: 	#191970;
+
+  --color-border-cyan:#008B8B;
+  --color-border-cyan-highlight:#80C5C5;
+  
+  --color-letter-alert: rgb(193, 0, 0);
   --color-letter-alert2: rgba(178,34,34);
   --color-letter-alert:3 rgba(220,20,60);
-  
-  
-  --color--accents : #722F37;
-  --color--accents2 : #6495ED;
-  --color--accents3: rgba(100,149,237);
   
   --container-width-lg: 75%;
   --container-wigth-md: 86%;
   --container-wigth-sm: 90%;
 }
-h1,h2,h3,h4,h5 {
-  font-weight: 500;
+html {
+  box-sizing:  border-box;
 }
 h1 {
-  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0.1rem;
+}
+h2,
+h3 {
+  line-height: 0.8;
 }
 
+p{
+  margin-bottom: 4rem;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.swiper-scroll > .swiper-scroll-horizontal{
+  width: 50%;
+  background-color: red;
+  color: red;
+}
 section > h2, section > h3 {
   color: var(--color-letter-primary);
   margin-bottom: 1.5rem;
@@ -59,15 +78,22 @@ a :hover{
   padding: 0.65rem 1.5rem;
   border-radius: 0.4rem;
   cursor: pointer;
-  border: 1px solid;
-  transition: var(--transition);
-  
+  border: 1px solid var(--color-border-cyan);
   margin-bottom: 1.5rem;
+  transition: var(--transition);
+  box-shadow:
+    inset 75px 0 35px #000018,
+    inset 65px 0 35px #fff,
+    inset 60px 0 35px silver,
+    inset 60px 0 100px #008B8B;
 }
+
 .btn:hover{
   transition: var(--transition);
-  background-color: var(--color--accents2);
-  color: var(--color-letter-third);
+  background-color: var(--color-letter-primary);
+  color: var(--color-primary);
+  box-shadow: none;
+  border: solid 1px var(--color-letter-primary);
 }
 * {
   margin: 0;
@@ -84,15 +110,18 @@ html{
 ::-webkit-scrollbar{
   display: none;
 }
-
+span > .HOME {
+display: none;
+}
 /* === NAV === */
 .nav {
   display: flex;
-  background-color: var(--color--accents2);
+  background-color: var(--color-letter-primary);
   cursor: pointer;
   padding: 0.60rem .75rem;
   gap: 2rem;
   font-size: 200%;
+  /* display: ; */
 }
 .nav > h3 {
   transition: var(--transition);
@@ -104,11 +133,14 @@ html{
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--color-bg3);
-  color: var(--color-letter-primary);
+  color: var(--color-border-cyan);
   min-height: 100vh;
   justify-content: center;
   font-size: 1.25rem;
   line-height: 1.6;
+  opacity: 85%;
+  background: url('./assets/background/background.jpg') fixed no-repeat;
+  background-size: cover;
 }
 
 /* === ABOUT === */
@@ -116,44 +148,53 @@ body {
   position: absolute;
   position: fixed;
   left: 0;
-  margin: 1.5rem auto;
+  margin: .1rem auto;
   max-width: 25%;
   overflow-x: hidden;
   background-color: var(--color-bg);
-  color: var(--color-letter-primary);
+  color: var(--color-border-cyan);
   background: linear-gradient(45deg,var(--color-primary));
   text-align: center;
+  width: fit-content;
 }
 .about_section h1 {
-  color: var(--color-letter-primary);
+  color: var(--color-border-cyan);
+  width: fit-content;
+  margin: auto;
 }
-
 .about_section > div> img {
   border-radius: 65rem 65rem 35rem 35rem ;
   padding: 3rem 1.5rem 1.5rem 1.5rem;
   transition: var(--transition2);
+  margin: auto;
 }
-.about_section> div>  img:hover {
+.about_section > div>  img:hover {
   border-radius: 60%;
   transition: var(--transition2);
-  transform:rotate(-5deg);
+}
+.about_section > div> a {
+  color: var(--color-border-cyan);
+}
+.about_section > div > a:hover {
+  color: var(--color-letter-primary);
 }
 
 /* === EXPERIENCE === */
 .experience {
   margin: 1.5rem auto;
-  width:min-content;
   gap: 5rem;
   transition: var(--transition);
-  display: flex;
   text-align: center;
+  display: flex;
+  width: fit-content;
 }
 .article {
+  width: min-content;
+  margin: auto;
   padding: 1.5rem;
-  border: solid;
+  border: 1resolid;
   border-color: var(--color-bg);
-  border-radius: 5px; 
-  gap: 5rem;
+  border-radius: 5px;
   transition: var(--transition);
   border: 1px solid transparent;
 }
@@ -163,70 +204,67 @@ body {
 }
 .experience > div .article:hover {
   transition: var(--transition);
-  color: var(--color--accents2);
-  border-color: var(--color--accents2);
-  background-color: var(--color-bg2);
+  background-color: var(--color-letter-primary);
+  opacity: none;
+}
+.experience > div h5 {
+  font-size: 1.75rem;
+}
+.experience > div {
+  font-size: 0.95rem;
 }
 
 /* === PROJECT === */
-.projects{
+.projects_list{
   margin: 1.5rem auto;
   border-radius: 15px;
-  overflow: hidden;
-  width: fit-content;
-  display: grid;
+  overflow:hidden;
   text-align: center;
+  width: 26%;
+  display:block;
 }
 .card {
   margin: auto;
   border: 1px solid transparent;
   border-radius: 5px;
-  padding: .1rem;
+  padding: .25rem;
   transition: var(--transition);
   background-color: transparent;
   display: flex;
 }
-.card_container {
-    padding : 0 1.25em;
-    width: min(90%, 1000px);
-    margin-inline: auto;
+.projects_container {
+  display: block;
+  padding : 0;
+  margin: auto;
+  align-items: center;
+  overflow: hidden;
 }
 .titles {
   display: inline-block;
 }
 .card:hover{
   transition: var(--transition); 
-  color: var(--color-letter-onHover);
-  border-color: var(--color-letter-onHover);
-  background-color: var(--color-bg);
+  border-color: var(--color-border-cyan);
+  background-color: var(--color-letter-primary);
+  opacity:unset;
 }
 
 .card > img {
   border-radius: 5px;
   height: 150px;
+  object-fit: cover;
 }
 .card > small {
   height: 80px;
+  transition: var(--transition);
+  opacity: 25%;
+}
+.card > small:hover{
+  opacity:unset;
+  transition: var(--transition);
 }
 
 /* === CONTACT === */
-/* .contact_section {
-  margin: 1.5rem auto;
-  text-align: center;
-  overflow-x: hidden;
-  transition: var(--transition);
-  border: 1px solid transparent;
-  border-radius: 5px;
-  width: auto;
-  display: grid;
-} */
-/* .contact_container {
-  margin: auto;
-  border-radius: 5px;
-  transition:  var(--transition);
-  border-color: var(--color-letter-third);
-  background-color: var();
-} */
 .contact_section{
   margin: 1.5rem auto;
   border-radius: 5px;
@@ -234,8 +272,8 @@ body {
   width: fit-content;
   display: grid;
   text-align: center;
-  border: .1rem solid transparent;
   max-width: fit-content;
+  transition: var(--transition);
 }
 .contact_form{
   border: 1px solid transparent;
@@ -246,9 +284,7 @@ body {
 }
 .contact_section:hover{
   transition: var(--transition);
-  color: var(--color-letter-onHover);
-  border-color: var(--color--accents2);
-  background-color: var(--color-bg);
+  background-color: var(--color-letter-primary);
 }
 .contact_section label , .contact_form input, textarea {
   text-align: left;
@@ -262,38 +298,75 @@ body {
 }
 .contact_container h2 {
   font-size: 35px;
+  width: fit-content;
+  margin: 1rem auto;
 }
 
 /* === FOOTER === */
 footer {
-  background-color: var(--color--accents2);
+  background-color: var(--color-letter-primary);
   text-align: center;
   position: fixed;
   bottom: 0;
   width: 100%;
   opacity: 60%;
-  color: var(--color-letter-primary);
+  color: var(--color-border-cyan);
+}
+footer > a {
+  color: var(--color-border-cyan);
 }
 footer > a:hover{
   color: var(--color-letter-primary);
-  opacity: 100%;
 }
-
 
 @media screen and (max-width: 1024px) {
-  .container {
-    width: var(--container-wigth-md)
+  main{
+    margin: 0;
   }
-  section{
-    margin-top: 6rem;
+  .nav_container{
+    width: max-content;
+    gap: .60rem;
+    font-weight: 600;
+    margin: auto;
+  }
+  body{
+  background-position:right;
+  background-size:auto;
+  }
+  .Home_About{
+    display: none;
+  }
+  .about_section {
+    position: center;
+    margin: auto;
+    max-width: fit-content;
+    font-size: medium;
+  }
+  .about_title {
+    font-size: 2rem;
+  }
+  .experience{
+    gap: .25rem;
+    padding: .55rem;
+  }
+  .articulo_name > h5{
+    font-size: 12px;
+  }
+  .projects_list{
+    font-size:  .75rem;
+    width: 85%;
+  }
+  .projects_container{
+    max-width: fit-content;
+    /* display: grid; */
+    text-align: center;
+    margin: 0;
   }
 }
-
 @media screen and (max-width: 600px) {
-  .container {
+  section {
     width: var(--container-wigth-sm)
-  }
-  section > h2{
-    margin-top: 2rem;
+  }  h1,h2,h3{
+    font-size: large;
   }
 }
