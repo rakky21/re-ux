@@ -15,7 +15,7 @@ function About() {
           style={{ height: "300px", width: "auto" }}
         />
           <h1 className="card-title border-bottom about_title"> Freddy </h1>
-          <p className="card-text my-2">
+          <p className="about_description my-2">
             I'm a Full-Stack Developer.{" "}
             <br />
             I have work experience in React, Javascript, CSS, HTML, back &
