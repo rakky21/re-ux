@@ -11,6 +11,7 @@
   --color-bg2: #C0C0C0;
   --color-bg3: #D3D3D3;
   --color-bg4: #f2f3f4;
+  --color-bg4: #0f1b1b;
 
   --color-letter-primary: #000018;  
   --color-letter-secondary: rgba(255,160,122);
@@ -108,7 +109,7 @@ html{
   scroll-behavior: smooth;
 }
 ::-webkit-scrollbar{
-  display: none;
+  display: auto;
 }
 span > .HOME {
 display: none;
@@ -390,3 +391,13 @@ footer > a:hover{
     font-size: large;
   }
 }
+
+/* .something {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+} */
+
+
+/* SOLID BACKGROUND & LIGHTER SHADE FOR SECOND BACKGROUND */

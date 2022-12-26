@@ -11,7 +11,7 @@ function About() {
         <img
           src={Cara}
           className="card-img my-2"
-          alt="Una Foto Aqui"
+          alt="Cover"
           style={{ height: "300px", width: "auto" }}
         />
           <h1 className="card-title border-bottom about_title"> Freddy </h1>
