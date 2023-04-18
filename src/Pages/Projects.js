@@ -1,12 +1,12 @@
 import React from "react";
-import Card from "../Card/Card.js";
+import Card from "../components/Card";
 
 const {
   toolkit,
   tunebook,
   famigos,
   tempora,
-} = require("../../assets/projects/ListadeFotos");
+} = require("../assets/projects/ListadeFotos.js");
 
 import { useState } from "react";
 
@@ -68,7 +68,7 @@ function Projects() {
       name: "Run Buddy",
       description:
         "Work done during the bootcamp",
-      href: "https://rakky21.github.io/tempora/",
+      href: "https://rakky21.github.io/run-buddy/",
       group: "Others",
     },
   ]);

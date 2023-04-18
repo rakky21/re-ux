@@ -12,7 +12,7 @@ import {
   SiMongodb,
 } from "react-icons/si";
 import { FaReact, FaNodeJs, FaPhp } from "react-icons/fa";
-import Articulo from "../Articulo/Articulo";
+import Articulo from "../components/Articulo";
 export default function Experience() {
   const [articulos, setArticulos] = useState([
     {

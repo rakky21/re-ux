@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { validateEmail } from "../../utils/helpers";
+import { validateEmail } from "../utils/helpers";
 import { AiOutlineMail } from "react-icons/ai";
 
 import emailjs from "emailjs-com";
