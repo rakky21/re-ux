@@ -57,8 +57,7 @@ function Projects() {
       id: 6,
       img: tempora,
       name: "BudgetTracker",
-      description:
-        "TBD",
+      description: "TBD",
       href: "https://rakky21.github.io/tempora/",
       group: "Snippits",
     },
@@ -66,10 +65,17 @@ function Projects() {
       id: 7,
       img: tempora,
       name: "Run Buddy",
-      description:
-        "Work done during the bootcamp",
+      description: "Work done during the bootcamp",
       href: "https://rakky21.github.io/run-buddy/",
       group: "Others",
+    },
+    {
+      id: 8,
+      img: tempora,
+      name: "Run Buddy",
+      description: "Work done during the bootcamp",
+      href: "https://rakky21.github.io/run-buddy/",
+      group: "Group",
     },
   ]);
 
@@ -80,11 +86,6 @@ function Projects() {
         projectCards={cards.filter((card) => card.group === "Group")}
         key={setCards.id}
         titulos="GROUP PROJECTS"
-      />
-      <Card
-        projectCards={cards.filter((card) => card.group === "Others")}
-        key={setCards.id}
-        titulos="OTHERS"
       />
       <Card
         projectCards={cards.filter((card) => card.group === "Snippits")}

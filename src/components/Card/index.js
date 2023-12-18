@@ -14,7 +14,7 @@ function Card({ projectCards, titulos }) {
       <Swiper
         modules={[Pagination, Scrollbar, Navigation]}
         spaceBetween={1}
-        slidesPerView={1}
+        slidesPerView={3}
         navigation
         scrollbar={{ draggable: true }}
         pagination={{ clickable: true }}
