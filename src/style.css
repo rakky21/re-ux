@@ -41,7 +41,8 @@ h3 {
 }
 
 p{
-  margin-bottom: 4rem;
+  margin:3rem;
+  font-size: 1rem;
 }
 img {
   display: block;
@@ -71,14 +72,14 @@ a :hover{
 .btn {
   width: max-content;
   display: inline-block;
-  background-color: var(--color--accents);
   padding: 0.65rem 1.5rem;
-  border-radius: 0.4rem;
+  background-color: var(--color-border-main);
+  border-radius: .4rem;
   cursor: pointer;
   border: 1px solid var(--color-border-cyan);
   margin-bottom: 1.5rem;
   transition: var(--transition);
-  box-shadow:
+  border:
     inset 75px 0 35px #000018,
     inset 65px 0 35px #fff,
     inset 60px 0 35px silver,
@@ -139,19 +140,16 @@ body {
   justify-content: center;
   font-size: 2rem;
   background-color: var(--color-bg-main);
-
 }
 
 /* === ABOUT === */
 .about_section {
-
-  margin: auto;
-  max-width: 25%;
+  margin: 1.5rem auto;
+  max-width: 45%;
   background-color: var(--color-bg);
   color: var(--color-border-cyan);
   background: linear-gradient(45deg,var(--color-primary));
   text-align: center;
-  width: fit-content;
 }
 .about_section h1 {
   color: var(--color-border-cyan);
@@ -159,8 +157,7 @@ body {
   margin: auto;
 }
 .about_section > div> img {
-  border-radius: 65rem 65rem 35rem 35rem ;
-  padding: 3rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 55rem 55rem 20rem 20rem ;
   transition: var(--transition2);
   margin: auto;
 }
@@ -171,8 +168,6 @@ body {
 .about_description:hover {
   background-color: var(--color-border-main);
   transition: var(--transition);
-  opacity: 75%;
-
 }
 
 .about_section > div>  img:hover {
@@ -188,7 +183,7 @@ body {
 
 /* === EXPERIENCE === */
 .experience {
-  margin: 10rem auto;
+  margin: 3rem auto;
   gap: 5rem;
   transition: var(--transition);
   text-align: center;
@@ -207,12 +202,11 @@ body {
 }
 .article > h3 {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .experience > div .article:hover {
   transition: var(--transition);
   background-color: var(--color-border-main);
-  opacity: 75%;
 }
 .experience > div h5 {
   font-size: 1.75rem;
@@ -230,25 +224,20 @@ body {
   display:block;
 }
 .card {
-  margin: auto;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  padding: .25rem;
+  margin: 3rem auto 3rem auto;
   transition: var(--transition);
   background-color: transparent;
-
+  border: 0;
 }
 .projects_container {
 display: column;
 }
 .titles {
   display: inline-block;
+  margin: 2rem auto;
 }
 .card:hover{
   transition: var(--transition); 
-  border-color: var(--color-border-cyan);
-  background-color: var(--color-letter-primary);
-  opacity:unset;
 }
 
 .card > img {
@@ -256,10 +245,15 @@ display: column;
   height: 150px;
   object-fit: cover;
 }
+.card > h3 {
+  margin: .55rem;
+}
 .card > small {
-  height: 80px;
+  height: 7rem;
   transition: var(--transition);
-  opacity: 25%;
+  opacity: 55%;
+  margin: .75rem auto;
+  font-size: 1rem;
 }
 .card > small:hover{
   opacity:unset;
@@ -292,23 +286,25 @@ footer > a:hover{
     color: var(--color-border-cyan-highlight);
   }
   .nav_container{
-    width: max-content;
-    gap: .60rem;
-    font-weight: 600;
+    gap: 5rem;
     margin: auto;
   }
   .nav_container > h3 > span {
-    font-size: 150rem;
+    font-size: 3rem;
   }
   body{
   background-position:right;
   background-size:auto;
   }
   .Home_About{
-    display: none;
-    justify-content: center;
-    margin: auto;
+  display: none;
+  margin: 1.5rem auto;
+  justify-content: center;
+  border-radius: 15px;
+  text-align: center;
+  width: 75%;
   }
+
   .about_section {
     position: center;
     margin: auto;
@@ -349,7 +345,7 @@ footer > a:hover{
   section {
     width: var(--container-wigth-sm)
   }  h1,h2,h3{
-    font-size: large;
+    font-size: small;
   }
 }
 

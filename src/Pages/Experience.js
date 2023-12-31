@@ -83,7 +83,7 @@ export default function Experience() {
       id: 9,
       name: "C++",
       avatar: [CgCPlusPlus],
-      experiencia: "Intermediate",
+      experiencia: "Experienced",
       group: "detras",
     },
     {

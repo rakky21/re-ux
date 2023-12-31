@@ -128,7 +128,7 @@ function About() {
   ]);
 
   return (
-    <div style={{ display:"flex" }}>
+    <div style={{ display:"flex" , margin: "auto 7rem"}}>
       <section className="about_section">
         <div className="card-body card_body">
           <img
