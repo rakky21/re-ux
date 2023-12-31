@@ -72,18 +72,12 @@ a :hover{
 .btn {
   width: max-content;
   display: inline-block;
-  padding: 0.65rem 1.5rem;
+  padding: 0.75rem 3rem;
   background-color: var(--color-border-main);
   border-radius: .4rem;
   cursor: pointer;
   border: 1px solid var(--color-border-cyan);
-  margin-bottom: 1.5rem;
   transition: var(--transition);
-  border:
-    inset 75px 0 35px #000018,
-    inset 65px 0 35px #fff,
-    inset 60px 0 35px silver,
-    inset 60px 0 100px #008B8B;
 }
 
 a {
