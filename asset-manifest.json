@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/re-ux/static/css/main.8f121fa2.css",
-    "main.js": "/re-ux/static/js/main.112b9203.js",
-    "static/media/famigos.jpg": "/re-ux/static/media/famigos.888f149867ad72fb1a7a.jpg",
-    "static/media/cara.jpg": "/re-ux/static/media/cara.088c8c385ef3cee7be6e.jpg",
-    "static/media/tunebook.jpg": "/re-ux/static/media/tunebook.2b3f1f23e19d21887a91.jpg",
-    "static/media/tempora.jpg": "/re-ux/static/media/tempora.3e2eeeefa26619ef650c.jpg",
-    "static/media/toolkit.jpg": "/re-ux/static/media/toolkit.869ea45ac3ef4f78a83b.jpg",
-    "index.html": "/re-ux/index.html",
-    "main.8f121fa2.css.map": "/re-ux/static/css/main.8f121fa2.css.map",
-    "main.112b9203.js.map": "/re-ux/static/js/main.112b9203.js.map"
+    "main.css": "/static/css/main.8f121fa2.css",
+    "main.js": "/static/js/main.568cafc9.js",
+    "static/media/famigos.jpg": "/static/media/famigos.888f149867ad72fb1a7a.jpg",
+    "static/media/cara.jpg": "/static/media/cara.088c8c385ef3cee7be6e.jpg",
+    "static/media/tunebook.jpg": "/static/media/tunebook.2b3f1f23e19d21887a91.jpg",
+    "static/media/tempora.jpg": "/static/media/tempora.3e2eeeefa26619ef650c.jpg",
+    "static/media/toolkit.jpg": "/static/media/toolkit.869ea45ac3ef4f78a83b.jpg",
+    "index.html": "/index.html",
+    "main.8f121fa2.css.map": "/static/css/main.8f121fa2.css.map",
+    "main.568cafc9.js.map": "/static/js/main.568cafc9.js.map"
   },
   "entrypoints": [
     "static/css/main.8f121fa2.css",
-    "static/js/main.112b9203.js"
+    "static/js/main.568cafc9.js"
   ]
 }
